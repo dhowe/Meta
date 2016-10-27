@@ -1,2 +1,2 @@
 # Miscellaneous
-Miscellaneous tickets
+Miscellaneous files and tickets
