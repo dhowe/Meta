@@ -74,7 +74,7 @@ public class test {
 
 	@Test
 	public void testCaseOne() {
-
+		clearAdVault();
 		testHeaders("http://rednoise.org/adntest/simple.html", "http://www.bonhams.com/departments/JWL/");
 		Assert.assertTrue(compareHeaders(adVisitHeaders, normalVisitHeaders));
 	}
@@ -95,7 +95,7 @@ public class test {
 			e.printStackTrace();
 		}
 
-		clearAdVault();
+	
 
 		if (driver != null) {
 			// Stop the BrowserMob Proxy Server
