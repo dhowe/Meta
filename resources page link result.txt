@@ -1,0 +1,179 @@
+======= Broken Links =======
+error Line: 180 http://www.eai.org/eai/
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link.
+error Line: 171 http://www.centrepompidou.fr/netart/ redirected to https://www.centrepompidou.fr/netart/
+    Status: 301 -> 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link.
+error Line: 176 http://www.da2.org.uk/da2.htm
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link.
+error Line: 182 http://www.engine27.org/
+    Status: 403 Forbidden
+
+    The link is forbidden! This needs fixing. Usual suspects: a missing index.html or Overview.html, or a missing ACL.
+error Line: 172 http://www.creativetime.org/ redirected to http://creativetime.org/
+    Status: 301 -> 403 Forbidden
+
+    The link is forbidden! This needs fixing. Usual suspects: a missing index.html or Overview.html, or a missing ACL.
+error Line: 215 http://www.sfmoma.org/espace/espace_overview.html
+    Status: 403 Forbidden
+
+    The link is forbidden! This needs fixing. Usual suspects: a missing index.html or Overview.html, or a missing ACL.
+info Line: 195 http://mitpress2.mit.edu/
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually.
+info Line: 133 http://docs.oracle.com/javase/6/docs/api
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually.
+warning Line: 217 http://www.smartlabcentre.com/ redirected to http://www.smartlabcentre.com/ redirect loop detected
+    Status: 301 -> 301 Moved Permanently
+
+    Retrieving the URI results in a redirect loop, that should be fixed. Examine the redirect sequence to see where the loop occurs.
+error Line: 174 http://www.newmedia,sunderland.ac.uk/crumb
+    Status: 500 Can't connect to www.newmedia,sunderland.ac.uk:80 (Name or service not known)
+
+    This is a server side problem. Check the URI.
+error Line: 218 http://www.newcat.org/
+    Status: 500 Can't connect to www.newcat.org:80 (Name or service not known)
+
+    This is a server side problem. Check the URI.
+error Line: 181 http://www.encart.net/
+    Status: 500 Can't connect to www.encart.net:80 (Name or service not known)
+
+    This is a server side problem. Check the URI.
+error Line: 224 http://www.groundzero.org/
+    Status: 500 Can't connect to www.groundzero.org:80 (Connection timed out)
+
+    This is a server side problem. Check the URI.
+error Line: 210 http://www.postmasters.art.com/
+    Status: 500 Can't connect to www.postmasters.art.com:80 (Name or service not known)
+
+    This is a server side problem. Check the URI.
+error Line: 168 http://www.bitforms.com%22%3Ebitforms%20gallery,%20new%20york/
+    Status: 500 Can't connect to www.bitforms.com">bitforms gallery, new york:80 (Name or service not known)
+
+    This is a server side problem. Check the URI.
+error Line: 250 http://www.electronicbookreview.com/
+    Status: 503 Service Unavailable
+
+    The server cannot service the request, for some unknown reason.
+
+
+
+
+
+
+======= List of redirects =======
+
+The links below are not broken, but the document does not use the exact URL, and the links were redirected. It may be a good idea to link to the final location, for the sake of speed.
+
+warning Line: 221 http://www.v2.nl/ redirected to https://www.v2.nl/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 191 http://www.ntticc.or.jp/ redirected to https://www.ntticc.or.jp/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 211 http://www.michelethursz.com/ redirected to https://www.michelethursz.com/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 203 http://www.nettime.org/ redirected to https://www.nettime.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 123 http://www.rednoise.org/rita/ redirected to http://rednoise.org/rita/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 167 http://www.banffcentre.ca/ redirected to https://www.banffcentre.ca/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Lines: 165, 266 http://artport.whitney.org/ redirected to https://whitney.org/artport
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 225 http://www.zkm.de/ redirected to https://zkm.de/de
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 212 http://www.rhizome.org/ redirected to https://rhizome.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 209 http://www.pixelgallery.org/ redirected to http://pixelgallery.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Lines: 130, 134 http://processing.org/reference/ redirected to https://processing.org/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 169 http://bostoncyberarts.org/ redirected to https://www.bostoncyberarts.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 132 http://www.rednoise.org/tweeter/doc redirected to http://www.rednoise.org/tweeter/doc/
+    Status: 301 -> 200 OK
+
+    The link is missing a trailing slash, and caused a redirect. Adding the trailing slash would speed up browsing.
+warning Line: 268 http://paper.li/eliterature redirected to https://paper.li/eliterature
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 214 http://www.sat.qc.ca/ redirected to https://sat.qc.ca/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 204 http://www.newmediabeijing.org/ redirected to http://www.newmediabeijing.org/index.html
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 131 http://www.rednoise.org/rita/reference redirected to http://rednoise.org/rita/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 201 http://www.nvr.org/ redirected to https://nvr.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 265 http://www.turbulence.org/ redirected to http://turbulence.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 245 http://iloveepoetry.com/ redirected to http://iloveepoetry.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 208 http://www.ps1.org/ redirected to https://www.moma.org/ps1
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 244 http://www.arras.net/ redirected to https://arras.net/arras/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 194 http://www.thekitchen.org/ redirected to https://thekitchen.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 184 http://www.eyebeam.org/ redirected to https://www.eyebeam.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 186 http://www.fact.co.uk/ redirected to https://www.fact.co.uk/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
+warning Line: 246 http://whitney.org/Exhibitions/Artport/Commissions/Codedoc redirected to https://whitney.org/exhibitions/codedoc
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated.
