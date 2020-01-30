@@ -1,0 +1,380 @@
+package mapsynth;
+
+import java.util.ArrayList;
+
+import processing.core.PApplet;
+
+import rita.RiText;
+import traer.physics.ParticleSystem;
+
+import maxlink.MaxLink;
+
+public class MapSynth extends PApplet {	
+	private static final long serialVersionUID = -3770298578544090494L;
+
+	public MaxLink link;
+	public String maxInput;
+
+
+	int radius = 8;
+
+	ArrayList<Node> nodes = new ArrayList<Node>();
+	ArrayList<Message> msgs = new ArrayList<Message>();
+	int chooseN = 1;
+	Node selected = null;
+
+	int wreset = 7;
+	int wcount = wreset;
+	int numw = 7;
+
+	ParticleSystem phys;
+
+	boolean holdinMouse = false;
+
+	RiText midinote;
+	RiText timbre;
+	RiText[] labels;
+	
+	public void setup() {
+		size(800,600);  
+
+		phys = new ParticleSystem(0, 0);
+
+		link = new MaxLink(this, "MapSynth");
+		link.declareMaxFunction("drop");
+		link.declareMaxFunction("add");
+		link.declareMaxFunction("remove");
+		link.declareMaxFunction("clear");
+		link.declareMaxFunction("next");
+		link.declareMaxFunction("prev");
+		link.declareMaxFunction("go");
+		link.declareMaxFunction("useProb");
+		link.declareInlet("maxInput", "maxInput");
+
+		midinote = new RiText(this, "", 25, 100);
+		timbre = new RiText(this, "", 25, 120);
+		
+		labels = new RiText[8];
+		for(int i = 0; i < 8; i++) {
+			labels[i] = new RiText(this, "" + (i+1), 0, -10);
+		}
+		
+	}
+
+	public void drop() {
+		if(nodes.size() < 8) {
+			boolean overlap = false;
+			for(int i=0;i<nodes.size();++i) {
+				if((Math.pow(mouseX - nodes.get(i).x,2) + Math.pow(mouseY - nodes.get(i).y,2)) < Math.pow(radius,2)) {
+					overlap = true;
+					break;
+				}
+			}
+			if(!overlap) {
+				nodes.add(new Node(mouseX,mouseY,false,64,50,link));
+			}
+		}
+	}
+	
+	public void remove() {
+		if(selected != null)
+			nodes.remove(selected);
+		selected = null;
+	}
+
+	public void clear() {
+		nodes.clear();
+		selected = null;
+	}
+	
+	public void add() {
+		if(selected != null)
+			selected.addMessage();
+	}
+	
+	public void next() {
+		if(selected != null)
+			selected.inc();
+	}
+	
+	public void prev() {
+		if(selected != null)
+			selected.dec();
+	}
+	
+	public void go() {
+		for(Node n : nodes) {
+			if(n.on) {
+				Message[] news = n.newMessage(phys);
+				for(Message nm : news)
+					msgs.add(nm);
+			}
+		}		
+	}
+	
+	public void useProb() {
+		if(selected != null) 
+			selected.useProb = !selected.useProb;
+	}
+	
+	public void maxInput(String maxInput) {
+		try {
+			String[] words = maxInput.split(" ");
+			if(words[0].equals("note")) {
+				selected.setMidiNum(Integer.parseInt(words[1]));
+			} else if(words[0].equals("timbre")) {
+				selected.setTimbre(Integer.parseInt(words[1]));
+			} else if(words[0].equals("select")) {
+				Node n = nodes.get(Integer.parseInt(words[1]) - 1);
+				if(selected == n)
+					selected = null;
+				else
+					selected = n;
+			} else if(words[0].equals("angle")) {
+				selected = nodes.get(Integer.parseInt(words[1]) - 1);
+				double angle = (Integer.parseInt(words[2]) / 127.) * 2. * Math.PI;
+				double x = Math.cos(angle) * selected.length();
+				double y = Math.sin(angle) * selected.length();
+				int ind = selected.selected;
+				selected.vx.set(ind, (float)x);
+				selected.vy.set(ind, (float)y);
+			} else if(words[0].equals("length")) {
+				selected = nodes.get(Integer.parseInt(words[1]) - 1);
+				double length = (Integer.parseInt(words[2])/127.) * 200. + 1.;
+				int ind = selected.selected;
+				double x = selected.vx.get(ind)/selected.length() * length;
+				double y = selected.vy.get(ind)/selected.length() * length;
+				selected.vx.set(ind, (float)x);
+				selected.vy.set(ind, (float)y);
+			} else if(words[0].equals("toggle")) {
+				selected = nodes.get(Integer.parseInt(words[1]) - 1);
+				selected.on = !selected.on;
+			}
+		} catch(Exception e) {
+			System.out.println("Bad input from max: " + maxInput);
+		}
+	}
+
+	public void draw() {
+		background(255);
+
+		if(holdinMouse && selected != null) {
+			selected.x = mouseX;
+			selected.y = mouseY;
+		}
+
+
+		for(int i=0;i<nodes.size();i++) {
+			Node n = nodes.get(i);
+			
+			stroke(0,255,255);
+			strokeWeight(4);
+			for(int k=0;k<n.vx.size();++k) {
+				if(n.useProb)
+					stroke(0,0,0);
+				else
+					stroke(255,0,0);
+				if(n == selected && k == n.selected) {
+					stroke(0,200,200);
+				}
+				line(n.x,n.y,n.x + n.vx.get(k),n.y + n.vy.get(k));  
+			}
+			
+			stroke(0);
+			strokeWeight(1);
+			if(n == selected) {
+				fill(40,140,230);
+				ellipse(n.x,n.y,radius + 10,radius + 10);
+				midinote.setText("Midi Note: " + n.midinum);
+				timbre.setText("Timbre: " + n.timbre);
+			}
+
+			fill(255,0,0);
+
+			if(n.on) 
+				fill(0,255,0);
+
+			ellipse(nodes.get(i).x,nodes.get(i).y,radius,radius);
+			
+			labels[i].setLocation(n.x - 10, n.y-10);
+
+			
+
+
+			
+
+		} 
+		for(int i = nodes.size(); i < 8; i++) {
+			labels[i].setLocation(0, -10);
+		}
+		if(selected == null) {
+			midinote.setText("");
+			timbre.setText("");
+		}
+
+
+		fill(0);
+		ellipse(32,43,48,48);
+
+
+		strokeWeight(6);
+		stroke(200,200,255);
+		ArrayList<Message> newm = new ArrayList<Message>();
+		for(int j=0;j<msgs.size();++j) {
+			Message m = msgs.get(j);
+			float x = m.p.position().x();
+			float y = m.p.position().y();
+
+
+			boolean kill = false;
+
+			for(int i=0;i<nodes.size();++i) {
+				Node n = nodes.get(i);
+				if(m.source == n || m.p.age() < .5f)
+					continue;
+				if((Math.pow(n.x - x,2) + Math.pow(n.y - y,2)) < Math.pow(radius,2)) {
+					kill = true;
+					Message[] news = n.newMessage(phys);
+					for(Message nm : news)
+						newm.add(nm);
+					n.trigger();
+				}
+				if(x < 0 || x > width || y < 0 || y > height) {
+					kill = true;
+				}
+			}
+			if(kill) {
+				msgs.remove(j);
+				phys.removeParticle(m.p);
+				j = 0;
+			} else {
+				line(x,y,
+						x - m.p.velocity().x() / 10,
+						y - m.p.velocity().y() / 10);
+			}
+		}
+		msgs.addAll(newm);
+
+		phys.tick(1 / frameRate);
+
+
+		stroke(255);
+		strokeWeight(1);
+		noFill();
+		wcount--;
+		if(wcount == 0)
+			wcount = wreset;
+		for(int i=0;i<numw;++i) {
+			float r = wreset * i + wcount;
+
+			ellipse(32,43,r,r);
+		}
+	}
+
+	public void mouseReleased() {
+		if(mouseButton == LEFT) {
+			holdinMouse = false;
+		}
+	}
+
+	public void mousePressed() {
+		if(mouseButton == RIGHT) {
+			if(selected != null) {
+				float xdiff = mouseX - selected.x;
+				float ydiff = mouseY - selected.y;
+				int ind = selected.selected;
+				selected.vx.set(ind, xdiff);
+				selected.vy.set(ind, ydiff);
+			}
+		} else {
+			for(int i=0;i<nodes.size();++i) {
+				if((Math.pow(mouseX - nodes.get(i).x,2) + Math.pow(mouseY - nodes.get(i).y,2)) < Math.pow(radius,2)) {
+					clickAt(nodes.get(i)); 
+				}
+			}
+
+			if((Math.pow(mouseX - 40,2) + Math.pow(mouseY - 40,2)) < 1600) {
+				//choose();
+				go();
+			}	
+		}
+	}
+
+	void clickAt(Node n) {
+		selected = n;
+		holdinMouse = true;
+	}
+
+	public void keyPressed() {
+		if(key == 'x') {
+			clear();
+		}
+		if(key == 'n') {
+			drop();	
+		}
+		// remove
+		if(key == 'e') {
+			remove();
+		}
+		if(key == 'p') {
+			useProb();
+		}
+		if(key == 'q') {
+			add();
+		}
+		if(key == 'w') {
+			next();
+		}
+		if(key == '1') {
+			chooseN = 1;
+		}   
+		if(key == '2') {
+			chooseN = 2;
+		}   
+		if(key == '3') {
+			chooseN = 3;
+		}   
+		if(key == '4') {
+			chooseN = 4;
+		}   
+		if(key == '5') {
+			chooseN = 5;
+		}   
+	}
+
+	void choose() {
+		int non = 0;
+		for(int i=0;i<nodes.size();++i) {
+			if(nodes.get(i).on)
+				non++;
+		}
+		int[] ind = new int[non];
+		int c = 0;
+		for(int i=0;i<nodes.size();++i) {
+			nodes.get(i).chosen = false;  
+			if(nodes.get(i).on) {
+				ind[c++] = i;
+			}
+		}
+		if(chooseN >= non) {
+
+			for(int i=0;i<non;++i) {
+				int dex = i;
+				nodes.get(ind[dex]).chosen = true;
+			}  
+			return;
+		}
+		for(int i=0;i<chooseN;++i) {
+
+			int dex = (int) random(non - i);
+
+			nodes.get(ind[dex + i]).chosen = true;
+			Message[] news = nodes.get(ind[dex + i]).newMessage(phys);
+			for(Message nm : news)
+				msgs.add(nm); 
+			ind[dex + i] = ind[i];
+		}  
+
+	}
+
+}

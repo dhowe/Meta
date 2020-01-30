@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>U B U W E B :: After Language Poetry -- Neil Hennessy</TITLE>
+
+<link rel=stylesheet type="text/css" href="papers.css">
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" link=#3963A5 alink=ff6600 vlink=3963A5>
+<A NAME="top"></A>
+<center>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=550>
+<TR>
+<TD VALIGN="TOP">
+
+<!--header nav-->
+<font face="verdana, geneva" size=-2">
+<img src="https://rednoise.org/teaching/images/arrow_blue.gif" border="0" align="middle"> <a href="http://www.ubu.com">UbuWeb</a> | <img src="https://rednoise.org/teaching/images/arrow_blue.gif" border="0" align="middle"> <a href="http://www.ubu.com/papers">UbuWeb Papers</a><br>
+</font><br><br>
+<!--end header nav-->
+
+<font face="verdana, geneva, arial" size=2>
+<font face="verdana, geneva" size=2 color=3963A5><B>Net Losses</B>
+<BR>
+<font size=2 color=FF6600>
+Neil Hennessy</FONT><BR><br>
+<font size=-2 color=3963A5>From <A HREF="https://rednoise.org/teaching/wdm/uploads/index.html"><I>OL3: open letter on lines online (2000)</I></A></font></font></font>
+
+
+
+
+
+<br><br>
+
+<br>
+<font size=2><div class="paper"> 
+
+
+
+<B><P>1. Introduction</P>
+</B><P ALIGN="CENTER"></P>
+<P>&#9;When using computers as tools to understand language, Computer and Language Scientists have concerned themselves with two areas of study: natural language generation, and textual analysis. The former attempts to create programs capable of participating in meaningful linguistic interactions, while the latter attempts to use combinatoric and statistical tools to help better understand linguistic artifacts. The following study outlines and demonstrates a new method for textual analysis to add to the tools already available to the literary-minded computer scientist. The most successful area of computer-assissted textual analysis is the field of stylometry, which attempts to attribute texts to authors according to statistically quantified measures of style; the aim of the <B>Finite State Poetry Machine</B> (<B>FSPM</B>) is to provide a more general tool that allows us to analyse and compare features of poems without regard to their authors. </P>
+
+<BR>
+<B><P>2. Finite State Poetry Machines</P>
+</B>
+<P>&#9;The <B>Finite State Poetry Machine</B> (<B>FSPM</B>) adapts the <B>state-based</B> or <B>Moore Finite State Machine</B> (<B>FSM</B>) to the analysis of poetry. An FSPM creates an abstraction of a poem by identifying a finite number of states, only one of which describes the current state of composition of the poem at any time.</P>
+
+<P>&#9;In the first example of a poem in four letters (Figure 1a), the constituent letters <BR>
+{<I> n</I> , <I>a</I> , <I>i</I> , <I>g</I> }, correspond to the four main <B>states</B> of the FSPM:</P>
+</FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=5 WIDTH=76>
+<TR><TD VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P>in an aging</P>
+<P>again I gag</P>
+<P>a gin gain</FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Figure 1a: poem</P>
+
+<P> The number of states is known as the <B>cardinality</B> of the poem, commonly denoted by <B>n</B>. In the graphical representation of an FSPM each state is shown as an individual bubble. The following of one letter by another, or the <B>transition</B> between states, is represented by an arc between bubbles. The FSPM for the poem in Figure 1a, showing all states and transitions, is illustrated in Figure 1b.</P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">
+
+<IMG SRC="https://rednoise.org/teaching/wdm/uploads/hennessy01.gif" ALT="" WIDTH="400" HEIGHT="267"><BR>
+
+Figure 1b: Finite State Poetry Machine</P>
+<P ALIGN="CENTER"></P>
+<P>Aside from the main states of the poem, there are two additional special states: <B>Start</B> and <B>End</B>. The Start state is represented by the Start bubble, and the End state is shown by a double circle (in this instance around <I>n</I>). To see the FSPM in operation, start at the Start state, and trace through the poem following the transition arcs between states until the End state is reached.</P>
+
+<B><P>3. Analysis and Properties of FSPMs</P>
+</B>
+<P>&#9;To perform a quantitative analysis of a poem P using an FSPM, it is first necessary to construct a <B>State-Transition Table</B>. The table (Figure 1c), shows all of the states, and the number of transitions entering and leaving each state.</P>
+</FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=5 WIDTH=279>
+<TR><TD VALIGN="TOP" COLSPAN=6>
+<B><FONT FACE="Verdana" SIZE=2><P>                                                    Transition</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP" ROWSPAN=5>
+<FONT FACE="Verdana" SIZE=2>
+<P>&nbsp;</P>
+<B><P>State</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Start</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">In</B></FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Out</B></FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">End</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">i</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">1</FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">3</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">2</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">g</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">3</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">2</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">a</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">2</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">3</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">n</B></FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">0</FONT></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">2</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">3</FONT></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">1</FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">`Figure 1c: State-Transition Table</P>
+
+<P>Note that the State-Transition Table in Figure 1c is symmetric, so the poem in Figure 1a is said to be a <B>symmetric poem</B>. All operations that can be performed on a symmetric matrix can be performed on a symmetric poem; hence there exists an <B>inverse poem</B> P<SUP>-1</SUP>, which can be obtained by performing standard matrix operations on the State-Transition Table (the inverse poem is left as an exercise). Note that symmetry is a property unique to poems with cardinality n=4, since poems with cardinality n&gt;4 or n&lt;4 do not produce nxn State-Transition Tables.</P>
+
+<P>&#9;A poem is said to be <B>complete</B> if each state has the maximum number of possible In's and Out's. For a complete poem with cardinality n=4, each entry in the In and Out columns is (n-1)=3.  To obtain the <B>sum</B> of a poem P, commonly denoted by  <FONT FACE="Symbol">&#83;</FONT>
+<B>(P)</B>, add the individual entries for the entire table (including Start and End). The sum of the poem in Figure 1a is <FONT FACE="Symbol">&#83;</FONT>
+(P)=22. The sum of a complete poem P for n=4 is <FONT FACE="Symbol">&#83;</FONT>
+(P)=24, or 2n(n-1)+2, which holds for the general case. If <B>auto-transitions</B> (transitions from state <I>x</I> to state <I>x</I>) are permitted, the sum of the poem can be up to <FONT FACE="Symbol">&#83;</FONT>
+(P)=2n<SUP>2</SUP>+2. A complete auto-transitive poem is rare, especially if it contains <I>u</I>, <I>i</I>, or <I>q</I> states, since these states do not often appear in auto-transitions. John Riddell's "Pope Leo: El Elope: A Tragedy in Four Letters" is an example of a complete auto-transitive poem. We can see directly from the FSPM in Figure 2 that "Pope Leo: El Elope" is also a symmetrical poem.</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="https://rednoise.org/teaching/wdm/uploads/hennessy02.gif" ALT="" WIDTH="400" HEIGHT="304"><BR>
+
+
+Figure 2: FSPM for &quot;Pope Leo: El Elope&quot;</P>
+
+<P>It can be easily shown through proof by contradiction that all complete poems with cardinality n=4, whether or not they are auto-transitive, are symmetrical. In general, for poems with small n, a greater sum results in a greater amount of alliteration, so the amount of alliteration a is directly proportional to the sum of the poem, or a~<FONT FACE="Symbol">&#83;</FONT>
+(P).</P>
+
+<P>&#9;</P>
+
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>As the cardinality of a poem increases, the size and complexity of the FSPM increases. A poem in six letters is given in Figure 3a, with its corresponding FSPM in Figure 3b.</P>
+</FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=5 WIDTH=126>
+<TR><TD VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P>singing staining angst</P>
+<P>against stinging satan</P>
+<P>isnt a stint in sin</FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Figure 3a: poem</P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">
+
+<IMG SRC="https://rednoise.org/teaching/wdm/uploads/hennessy03.gif" ALT="" WIDTH="400" HEIGHT="304"><BR>
+Figure 3b: FSPM for poem with cardinality n=6</P>
+
+<P>Along with increased size and complexity in the poem, an increase in cardinality often (but not always) brings an increase in semantic coherence, denoted by c; hence n~c.</P>
+
+<B><P>4. Conclusions</P>
+</B>
+<P>Since the study of Finite State Poetry Machines is so new, "Conclusions" is too strong a word to attach to the closing statements of this brief study; however, I will endeavour to make some general comments based on the preliminary research.</P>
+
+<P>&#9;The first, and most subtle effect of the FSPM model is the foregrounding of the act of reading as travelling in space: your eye travels along the trajectories of letters across the page. The arrows between letters make the implied travel through and between words explicit. The FSPM&#146;s graphical representation also allows us to see structural similarities between different poems in the relations of their constituent letters or states.</P>
+
+<P>&#9;On a less heuristic level, an analysis of FSPMs can yield interesting properties&#150; unavailable through traditional methods of analysis&#150;like completeness, symmetry, and the hitherto undiscovered existence of the inverse poem, as well as the proportionality of attributes such as alliteration and semantic coherence.</P>
+
+<P>&#9;Some of the limitations of FSPMs are inherent to the model itself. For one, an FSPM that specifies a poem does not necessarily uniquely specify it. Rather, in most cases (except for the trivial one where every instance of every letter in the poem is treated as a unique state, and the transitions follow the regular course of reading) the FSPM specifies a <I>family</I> of poems. This is not necessarily a limitation, since the generality of the FSPM is what allows us to draw the conclusions noted above. To reclaim a term for poetry that was stolen by Computer Science for programming languages from traditional grammar, FSPMs give us a way of specifying<I> syntax</I>.</P>
+
+<P>&#9;Because FSPMs can grow quadratically as their cardinality increases (practice with FSPMs shows that there is usually an implied squared term in the sum) the complexity of the graphical representation increases proportionally. At a certain point, the usefulness of a graphical FSPM is suspect, as anyone who tries to draw an FSPM for a poem using all 26 letters will soon discover. The potential for discovery lies in the grounds for analysis of poems with large cardinality laid by the analysis of poems with smaller cardinality through an inductive process. The techniques developed in this paper, along with further techniques that are currently under consideration and those that remain to be discovered, can be implemented easily in any computer language supporting mapping Abstract Data Types. Once appropriate constants are discovered, the proportionalities can be defined as functions to obtain quantitative measurement systems.</P>
+
+<P>The possibility of typing a poem into a computer and receiving a printed analysis of it is now within our grasp. Qualitative analysis of poetry can now be augmented by quantitative measurements made possible by a new intersection of Language and Computer Science: a digital scale to weigh the properties of poetics.</P>
+
+<P>Since the Chomskian revolution, the study of Linguistics has seemed less a Humanity than a Mathematical Science. With the analytical tools developed in Computational Linguistics, the Humanities can now use computers to reclaim language for humanity. The possibilities, as always, are endless.</P>
+
+
+<br>
+<BR>
+<center><font size=-2>
+<A HREF="https://rednoise.org/teaching/wdm/uploads/index.html">OL3: open letter on lines online</A> | <A HREF="http://www.ubu.com" TARGET="_top">UbuWeb</A>
+</center>
+
+
+
+</div>
+<font size=-2>
+
+</FONT>
+</td>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
+

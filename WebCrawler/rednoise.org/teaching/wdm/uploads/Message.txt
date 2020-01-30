@@ -1,0 +1,18 @@
+package mapsynth;
+
+import traer.physics.Particle;
+import traer.physics.ParticleSystem;
+
+public class Message {
+
+	public Particle p;
+	Node source;
+	
+	public Message(ParticleSystem ps, float x, float y, float vx, float vy, Node source) {
+		p = ps.makeParticle(1, x + vx / 10, y + vy / 10, 0);
+		p.velocity().set(vx,vy,0);
+		this.source = source;
+	}
+	
+
+}

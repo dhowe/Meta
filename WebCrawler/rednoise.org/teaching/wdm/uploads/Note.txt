@@ -1,0 +1,109 @@
+package mapsynth;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import maxlink.MaxLink;
+import traer.physics.ParticleSystem;
+
+public class Node {
+	
+	//position
+	public float x;
+	public float y;
+	
+	//can send messages
+	boolean on;
+	
+	//sending messages
+	boolean chosen;
+	
+	//sound triggering
+	MaxLink link;
+	int midinum;
+	int timbre;
+	
+	//arrow locations
+	ArrayList<Float> vx = new ArrayList<Float>();
+	ArrayList<Float> vy = new ArrayList<Float>();
+	
+	//choose arrow randomly?
+	boolean useProb = true;
+	
+	//next arrow
+	int selected = 0;
+	
+	public Node(float x, float y, boolean on, int midinum, int timbre, MaxLink link) {
+		this.x = x;
+		this.y = y;
+		this.on = on;
+		chosen = false;
+		this.midinum = midinum;
+		this.timbre = timbre;
+		this.link = link;
+
+		addMessage();
+	}
+
+	
+	void inc() {
+		selected++;
+		if(selected == vx.size())
+			selected = 0;
+	}
+	
+	void dec() {
+		selected--;
+		if(selected < 0)
+			selected = vx.size() - 1;
+	}
+	
+	public void addMessage() {
+		//arrow at random position
+		Random rando = new Random();
+		float avx = rando.nextInt(50) + 50;
+		if(rando.nextBoolean())
+			avx *= -1;
+		float avy = rando.nextInt(50) + 50;
+		if(rando.nextBoolean())
+			avy *= -1;
+		vx.add(avx);
+		vy.add(avy);
+	}
+	
+	public double length() {
+		return Math.sqrt(vx.get(selected)*vx.get(selected) + 
+				vy.get(selected)*vy.get(selected)); 
+	}
+	
+	public void setMidiNum(int newNum) {
+		midinum = newNum;
+	}
+	
+	public void setTimbre(int newTimbre) {
+		timbre = newTimbre;
+	}
+	
+	public void trigger() {
+		link.output(midinum + " " + timbre);
+	}
+	
+	public Message[] newMessage(ParticleSystem ps) {
+		if(useProb) {
+			Message[] ret = new Message[1];
+			Random rando = new Random();
+			int i = rando.nextInt(vx.size());
+			ret[0] = new Message(ps,x,y,vx.get(i),vy.get(i),this);
+			return ret;
+		} else {
+			Message[] ret = new Message[vx.size()];
+			for(int i=0;i<vx.size();++i) {
+				ret[i] = new Message(ps,x,y,vx.get(i),vy.get(i),this);
+			}
+			return ret;
+		}
+	}
+		
+	
+	
+}
