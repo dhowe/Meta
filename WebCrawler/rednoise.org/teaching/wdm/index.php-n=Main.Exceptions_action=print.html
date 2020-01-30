@@ -1,0 +1,151 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | Main / Exceptions</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=Main.HomePage.html'>Main: Exceptions</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<h3>Exceptions</h3>
+<p class='vspace'><strong>try/catch Statement</strong>
+</p>
+<p class='vspace'>The try/catch statement encloses  a block of code and is used to handle errors (or exceptions) that might occur in that code. Here is the general syntax for a try/catch statement:
+</p>
+<div class='vspace'></div><pre>    try 
+    {
+        // code-to-try
+    } 
+    catch (ExceptionClass exceptionName) 
+    {
+       // on-error-code
+    }
+</pre><p class='vspace'>The try/catch statement has four parts. The code-to-try contains code we are going to 'try' that might 'throw' the exception that we want to handle. The ExceptionClass is the class name of the exception we want to handle or 'catch'. The exceptionName specifies a name for a variable that will hold the Exception object if one occurs. Lastly, the on-error-code contains the code to execute if the exception occurs. 
+</p>
+<p class='vspace'>If an exception occurs anywhere in the code-to-try block, the program skips directly to the on-error-code. Once the on-error-code block is completed, the program continues after the try/catch statement. Here is an example of code that tries to create a file, which could result in an IOException (say if the directory does not exist).
+</p>
+<div class='vspace'></div><pre>    String filename = "/nosuchdir/filename";
+    try 
+    {
+        // Try to create the file
+        new File(filename).createNewFile();
+    }
+    catch (IOException e)  
+    {
+        // Print out the exception that occurred
+        System.out.println("Unable to create "+filename+": "+e.getMessage());
+    }
+    // Program continues here after code in the 'catch' block.
+</pre><p class='vspace'>Its possible to specify more than one exception in a try/catch statement. When an exception occurs, each handler is checked in order (i.e. top-down) and the first match is executed. 
+</p>
+<p class='vspace'>The example below opens a connection to a website. Two kinds of exception can be thrown -- one if the URL is invalid and one if the web page is not accessible. The example uses an deliberately invalid URL resulting in a 'MalformedURLException'.
+</p>
+<div class='vspace'></div><pre>    // URL string deliberately missing 'http:' 
+    String urlStr = "www.example.com/register.html";
+    try 
+    {
+        URL url = new URL(urlStr);
+        InputStream is = url.openStream();
+        is.close();
+    }
+   catch (MalformedURLException e) 
+   {
+        // Print out the exception that occurred
+        System.out.println("Invalid URL "+urlStr+": "+e.getMessage());
+    } 
+    catch (IOException e) 
+    {
+        // Print out the exception that occurred
+        System.out.println("Unable to execute "+urlStr+": "+e.getMessage());
+    }
+</pre><p class='vspace'>If an exception is thrown that doesn't match any of the catch blocks specified, the program will exit immediately. In the following example, a NullPointerException is thrown, which is not caught by the MalformedURLException block and so is an 'uncaught exception' which kills the program.
+</p>
+<div class='vspace'></div><pre>    // This string is set to null to cause an exception
+    String urlStr = null;
+    try {
+        int len = urlStr.length(); // Causes a NullPointerException
+        URL url = new URL(urlStr);
+    } 
+    catch (MalformedURLException e) 
+    {
+        // Print the exception that occurred
+        System.out.println("Invalid URL "+urlStr+": "+e.getMessage());
+    }
+</pre><p class='vspace'>When exiting with an 'uncaught exception, the program outputs a 'stack trace', identifying the line of code that threw the exception. The output (to the console) looks something like:
+</p>
+<div class='vspace'></div><pre>    Exception in thread "main" java.lang.NullPointerException
+            at MyClass.mymethod(MyClass.java:162)
+            ...
+</pre><p class='vspace'>Note: Some 'try-catch' blocks are required by the Java compiler and some (like for NullPointerExceptions) are optional. For the former, you MUST either use a 'try-catch' statement or add a 'throws' statement to the method signature (se below). Using 'throws' tells the compiler that your method is aware that an exception could occur, but that you want to pass it on to the calling code instead of handling it locally. 
+</p>
+<div class='vspace'></div><pre>  void myOpenFileMethod() throws IOException
+  {
+      String filename = "/nosuchdir/filename";
+
+      // this line could throw an Exception, 
+      // but lets whoever called the method handle it
+      new File(filename).createNewFile();    
+  }
+</pre><p class='vspace'>Note: Like any other code block (denoted by curly-braces: { ... } ) , try-catch blocks affect variable-scope. This means that a variable declared inside a try (or catch) block  won't be visible to the program outside of that block. In the example below, we can access the variable 'urlStr' in the catch block, but not 'url' as it declared only in the try.
+</p>
+<div class='vspace'></div><pre>   // URL string deliberately missing 'http:' 
+    String urlStr = "www.example.com/register.html";
+    try 
+    {
+        URL url = new URL(urlStr);
+        InputStream is = url.openStream();
+        is.close();
+    }
+    catch (Exception e) 
+    {
+        // Print out the exception that occurred
+        System.out.println("An error: "+e.getMessage());
+    } 
+</pre>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=Main.Exceptions</div>
+    <div class='lastmod'>Page last modified on January 25, 2009, at 07:32 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

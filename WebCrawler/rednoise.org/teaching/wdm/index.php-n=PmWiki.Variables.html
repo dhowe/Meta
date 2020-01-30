@@ -1,0 +1,882 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<!-- change fcfcfc -> 10004f   for dark borders -->
+
+<title>Writing Digital Media | PmWiki / Variables browse</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<!-- Update these tags -->
+<meta name="description" content="programming for digital art and literature course web">
+<meta name="keywords" content="e-writing daniel howe programming digital art literature">
+
+<style type="text/css">@import url("pub/skins/evolver/evolver.css");
+  <!-- $PageInlineStyle  -->
+</style>
+
+<!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+
+<body> 
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%"
+background="uploads/cardheader2.jpg"><!-- bgcolor=#4670ae -->
+
+<tr><td height=120 valign=top>
+
+<table cellspacing="0" cellpadding="5" border="0" height=100% width="1025">
+<tr>
+<!--td style="padding-left: 20px" align="left" valign="bottom"-->
+<td align="right" valign="bottom">
+	<table width=197 cellspacing="2" border="0" bgcolor="#cccfd6">
+	<tr>
+        <td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=PmWiki.Variables_action=edit.html">edit</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=PmWiki.Variables_action=upload.html">upload</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=Site.AllRecentChanges.html" rel="external">recent</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=PmWiki.Variables_action=print.html" rel="external">print</a></td>
+	
+	</tr>
+	</table>
+</td>
+</tr></table>
+</td></tr>
+
+
+<tr>
+  <td><!-- top horizontal bar -->
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr><td height=0 bgcolor=#cccfd6></td></tr>
+    <tr>
+      <td bgcolor="#fcfcfc" style="padding-left: 10px">
+        <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+
+		<td valign="top" style="padding-top: 16px" bgcolor="#fcfcfc">
+
+<table cellspacing="2" cellpadding="0" border="0" bgcolor="#CCCFD6" width="100%">
+		<tr><td class="searchheader" height=20>
+        <strong><a href='index.php-n=Site.Search.html'>Search</a></strong>
+		     </td>
+    </tr>
+
+		<tr><td class="searchcell">
+       <form action='https://rednoise.org/teaching/wdm/index.php?n=Site.Search'>
+        <input type="hidden" name="pagename" value="Site/Search" />
+        <input class="navinput" size="10" type="text" name="q" value="" />
+        <input class="navbutton" type="submit" value="Go" />
+        </form>
+		  </td>
+    </tr>
+
+</table>
+		<br>
+<table cellspacing="2" cellpadding="0" border="0" bgcolor="#CCCFD6" width="100%">
+
+  <tr><td id='wikileft' height=2000
+valign=top>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<ul><li><a class='wikilink' href='index.php-n=Main.HomePage.html'><strong><span style='font-size:120%'>Home</span></strong></a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Main.Slides.html'>Slides</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Assignments.html'>Assignments</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Readings.html'>Readings</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Freedom.html'>Freedom</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Questions.html'>Questions</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Grading.html'>Grading</a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Main.Artists.html'>Artists</a>
+</li><li><a class='wikilink' href='index.php-n=Main.ShortShorts.html'>ShortShorts</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Presentations.html'>Presentations</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/rita/' rel='nofollow'>The RiTa Library</a>
+</li><li><a class='wikilink' href='index.php-n=Main.EditorExamples.html'>RiTa @p5js-editor</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Works.html'>ExampleWorks</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Exercises.html'>WritingIdeas</a>
+</li><li><a class='wikilink' href='index.php-n=Main.PoeticForms.html'>PoeticForms</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Techniques.html'>Techniques</a>
+</li><li><a class='wikilink' href='index.php-n=Main.TwitterBots.html'>TwitterBots</a>
+<div class='vspace'></div></li><li><a class='urllink' href='http://processing.org/reference/' rel='nofollow'>P5.js Reference</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/rita/reference' rel='nofollow'>The RiTa API</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/tweeter/doc' rel='nofollow'>Tweeter API</a>
+</li><li><a class='urllink' href='http://docs.oracle.com/javase/6/docs/api' rel='nofollow'>Java API</a>
+</li><li><a class='urllink' href='http://processing.org/reference/' rel='nofollow'>Processing API</a>
+</li><li><a class='urllink' href='http://twitter4j.org/oldjavadocs/4.0.2' rel='nofollow'>Twitter4j API</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Grammars.html'>Grammars</a>
+</li><li><a class='wikilink' href='index.php-n=Main.N-Grams.html'>N-Grams</a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Site.SideBar_action=edit.html'>SideBar</a>
+</li></ul>
+
+                   <!--Main.SideBar-->
+        </td>
+  </tr>
+
+		</table>
+
+    <!--/PageLeftFmt-->
+
+		</td>
+
+		<td valign="top" bgcolor=#fcfcfc>
+		<table cellspacing="0" cellpadding="0" border="0" width=640>
+  		<tr>
+    		<td bgcolor="#fcfcfc" style="padding-left: 10px; padding-top: 12px; padding-right: 15px">
+
+                <!--PageTitleFmt-->
+                <strong><h2 class="titletext">
+                   <a href="index.php-n=PmWiki.PmWiki.html">PmWiki</a> &raquo; 
+                   <a href="index.php-n=PmWiki.Variables.html">Variables</a>
+                </h2></strong>
+
+<div style="width: 50em; margin-right:10px; margin-left:10px">
+                <!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&lt; <a class='wikilink' href='index.php-n=PmWiki.UrlApprovals.html'>Url approvals</a> | <a class='wikilink' href='index.php-n=PmWiki.DocumentationIndex.html#trailstart'>Documentation Index</a> | <a class='wikilink' href='index.php-n=PmWiki.Functions.html'>Functions</a> &gt;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>administrators (basic) </span>
+</div>
+<p><br clear='all' />
+</p><div class='frame rfloat' style='font-size: smaller;' > 
+<p><a name='index' id='index'></a>
+</p><h2>List of documented PHP variables</h2>
+<table><tr><th>Variable</th><th>Documented in</th></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.DebugVariables.html#AbortFunction'><code>&#036;AbortFunction</code></a></td><td><a 
+      href='index.php-n=PmWiki.DebugVariables.html'>DebugVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#ActionSkin'><code>&#036;ActionSkin</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#AllowPassword'><code>&#036;AllowPassword</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#AsSpacedFunction'><code>&#036;AsSpacedFunction</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#AuthId'><code>&#036;AuthId</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#AuthLDAPBindDN'><code>&#036;AuthLDAPBindDN</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#AuthLDAPBindPassword'><code>&#036;AuthLDAPBindPassword</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#Author'><code>&#036;Author</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#AuthorGroup'><code>&#036;AuthorGroup</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#AuthPw'><code>&#036;AuthPw</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#AutoCreate'><code>&#036;AutoCreate</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#BaseName'><code>&#036;BaseName</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#BaseNamePatterns'><code>&#036;BaseNamePatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlockedMessagesFmt'><code>&#036;BlockedMessagesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistActions'><code>&#036;BlocklistActions</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistDownload'><code>&#036;BlocklistDownload</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistDownloadFmt'><code>&#036;BlocklistDownloadFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistDownloadRefresh'><code>&#036;BlocklistDownloadRefresh</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistMessageFmt'><code>&#036;BlocklistMessageFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#BlocklistPages'><code>&#036;BlocklistPages</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#CategoryGroup'><code>&#036;CategoryGroup</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#CookiePrefix'><code>&#036;CookiePrefix</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#DefaultGroup'><code>&#036;DefaultGroup</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#DefaultName'><code>&#036;DefaultName</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#DefaultPage'><code>&#036;DefaultPage</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.I18nVariables.html#DefaultPageCharset'><code>&#036;DefaultPageCharset</code></a></td><td><a 
+      href='index.php-n=PmWiki.I18nVariables.html'>I18nVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DefaultPageTextFmt'><code>&#036;DefaultPageTextFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#DefaultPasswords'><code>&#036;DefaultPasswords</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DeleteKeyPattern'><code>&#036;DeleteKeyPattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DiffKeepDays'><code>&#036;DiffKeepDays</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DiffKeepNum'><code>&#036;DiffKeepNum</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DraftActionsPattern'><code>&#036;DraftActionsPattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#DraftRecentChangesFmt'><code>&#036;DraftRecentChangesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#DraftSuffix'><code>&#036;DraftSuffix</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EditFunctions'><code>&#036;EditFunctions</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EditRedirectFmt'><code>&#036;EditRedirectFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EditTemplatesFmt'><code>&#036;EditTemplatesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#EnableBlocklist'><code>&#036;EnableBlocklist</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#EnableBlocklistImmediate'><code>&#036;EnableBlocklistImmediate</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.DebugVariables.html#EnableDiag'><code>&#036;EnableDiag</code></a></td><td><a 
+      href='index.php-n=PmWiki.DebugVariables.html'>DebugVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#EnableDiffInline'><code>&#036;EnableDiffInline</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#EnableDirectDownload'><code>&#036;EnableDirectDownload</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnableDraftAtomicDiff'><code>&#036;EnableDraftAtomicDiff</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnableDrafts'><code>&#036;EnableDrafts</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#EnableFixedUrlRedirect'><code>&#036;EnableFixedUrlRedirect</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnableGUIButtons'><code>&#036;EnableGUIButtons</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.DebugVariables.html#EnableIMSCaching'><code>&#036;EnableIMSCaching</code></a></td><td><a 
+      href='index.php-n=PmWiki.DebugVariables.html'>DebugVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#EnableLinkPageRelative'><code>&#036;EnableLinkPageRelative</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#EnableLinkPlusTitlespaced'><code>&#036;EnableLinkPlusTitlespaced</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnableLocalConfig'><code>&#036;EnableLocalConfig</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#EnableNotify'><code>&#036;EnableNotify</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#EnableNotifySubjectEncode'><code>&#036;EnableNotifySubjectEncode</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#EnablePageIndex'><code>&#036;EnablePageIndex</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#EnablePageListProtect'><code>&#036;EnablePageListProtect</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#EnablePageTitlePriority'><code>&#036;EnablePageTitlePriority</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#EnablePageVarAuth'><code>&#036;EnablePageVarAuth</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#EnablePathInfo'><code>&#036;EnablePathInfo</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnablePGCust'><code>&#036;EnablePGCust</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#EnablePostAttrClearSession'><code>&#036;EnablePostAttrClearSession</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnablePostAuthorRequired'><code>&#036;EnablePostAuthorRequired</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#EnablePublishAttr'><code>&#036;EnablePublishAttr</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnableRedirect'><code>&#036;EnableRedirect</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#EnableRedirectQuiet'><code>&#036;EnableRedirectQuiet</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnableRelativePageVars'><code>&#036;EnableRelativePageVars</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnableRevUserAgent'><code>&#036;EnableRevUserAgent</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#EnableROSEscape'><code>&#036;EnableROSEscape</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#EnableSessionPasswords'><code>&#036;EnableSessionPasswords</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.DebugVariables.html#EnableStopWatch'><code>&#036;EnableStopWatch</code></a></td><td><a 
+      href='index.php-n=PmWiki.DebugVariables.html'>DebugVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#EnableTableAutoValignTop'><code>&#036;EnableTableAutoValignTop</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#EnableUndefinedTemplateVars'><code>&#036;EnableUndefinedTemplateVars</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#EnableUpload'><code>&#036;EnableUpload</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#EnableUploadGroupAuth'><code>&#036;EnableUploadGroupAuth</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#EnableUploadOverwrite'><code>&#036;EnableUploadOverwrite</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#EnableUploadVersions'><code>&#036;EnableUploadVersions</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Blocklist.html#EnableWhyBlocked'><code>&#036;EnableWhyBlocked</code></a></td><td><a 
+      href='index.php-n=PmWiki.Blocklist.html'>Blocklist</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnableWikiWords'><code>&#036;EnableWikiWords</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#EnableWSPre'><code>&#036;EnableWSPre</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.I18nVariables.html#EnableXLPageScriptLoad'><code>&#036;EnableXLPageScriptLoad</code></a></td><td><a 
+      href='index.php-n=PmWiki.I18nVariables.html'>I18nVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#FarmD'><code>&#036;FarmD</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#FarmPubDirUrl'><code>&#036;FarmPubDirUrl</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.OtherVariables.html#FmtP'><code>&#036;FmtP</code></a></td><td><a 
+      href='index.php-n=PmWiki.OtherVariables.html'>OtherVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.OtherVariables.html#FmtPV'><code>&#036;FmtPV</code></a></td><td><a 
+      href='index.php-n=PmWiki.OtherVariables.html'>OtherVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.OtherVariables.html#FmtV'><code>&#036;FmtV</code></a></td><td><a 
+      href='index.php-n=PmWiki.OtherVariables.html'>OtherVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#FPLTemplatePageFmt'><code>&#036;FPLTemplatePageFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#FTimeFmt'><code>&#036;FTimeFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#GroupFooterFmt'><code>&#036;GroupFooterFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#GroupHeaderFmt'><code>&#036;GroupHeaderFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#GroupPattern'><code>&#036;GroupPattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#GroupPrintFooterFmt'><code>&#036;GroupPrintFooterFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#GroupPrintHeaderFmt'><code>&#036;GroupPrintHeaderFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#GUIButtons'><code>&#036;GUIButtons</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#HandleAuth'><code>&#036;HandleAuth</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#HandleEditFmt'><code>&#036;HandleEditFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLFooterFmt'><code>&#036;HTMLFooterFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLHeaderFmt'><code>&#036;HTMLHeaderFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLPNewline'><code>&#036;HTMLPNewline</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLStylesFmt'><code>&#036;HTMLStylesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLTagAttr'><code>&#036;HTMLTagAttr</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#HTMLVSpace'><code>&#036;HTMLVSpace</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#IMapLinkFmt'><code>&#036;IMapLinkFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#InterMapFiles'><code>&#036;InterMapFiles</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#IsPagePosted'><code>&#036;IsPagePosted</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#LinkPageCreateFmt'><code>&#036;LinkPageCreateFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#LinkPageCreateSpaceFmt'><code>&#036;LinkPageCreateSpaceFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#LinkPageExistsFmt'><code>&#036;LinkPageExistsFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#LinkPageSelfFmt'><code>&#036;LinkPageSelfFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#LinkUploadCreateFmt'><code>&#036;LinkUploadCreateFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#LinkWikiWords'><code>&#036;LinkWikiWords</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#LocalDir'><code>&#036;LocalDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#LogoutCookies'><code>&#036;LogoutCookies</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#LogoutRedirectFmt'><code>&#036;LogoutRedirectFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#MakePageNameFunction'><code>&#036;MakePageNameFunction</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#MakePageNamePatterns'><code>&#036;MakePageNamePatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#MakePageNameSplitPattern'><code>&#036;MakePageNameSplitPattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#MakeUploadNamePatterns'><code>&#036;MakeUploadNamePatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#MaxIncludes'><code>&#036;MaxIncludes</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.OtherVariables.html#MaxPageTextVars'><code>&#036;MaxPageTextVars</code></a></td><td><a 
+      href='index.php-n=PmWiki.OtherVariables.html'>OtherVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#MessagesFmt'><code>&#036;MessagesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#MetaRobots'><code>&#036;MetaRobots</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#NamePattern'><code>&#036;NamePattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyBodyFmt'><code>&#036;NotifyBodyFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyDelay'><code>&#036;NotifyDelay</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyFile'><code>&#036;NotifyFile</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyFrom'><code>&#036;NotifyFrom</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyHeaders'><code>&#036;NotifyHeaders</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyItemFmt'><code>&#036;NotifyItemFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyList'><code>&#036;NotifyList</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyListPageFmt'><code>&#036;NotifyListPageFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyParameters'><code>&#036;NotifyParameters</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifySquelch'><code>&#036;NotifySquelch</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifySubjectFmt'><code>&#036;NotifySubjectFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.Notify.html#NotifyTimeFmt'><code>&#036;NotifyTimeFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.Notify.html'>Notify</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#PageAttributes'><code>&#036;PageAttributes</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.OtherVariables.html#PageCacheDir'><code>&#036;PageCacheDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.OtherVariables.html'>OtherVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#PageCSSListFmt'><code>&#036;PageCSSListFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#PageEditFmt'><code>&#036;PageEditFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#PageEditForm'><code>&#036;PageEditForm</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#PageIndexFile'><code>&#036;PageIndexFile</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#PageListCacheDir'><code>&#036;PageListCacheDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#PageLogoUrl'><code>&#036;PageLogoUrl</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#pagename'><code>&#036;pagename</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#PageNotFoundHeaderFmt'><code>&#036;PageNotFoundHeaderFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#PagePathFmt'><code>&#036;PagePathFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#PageRedirectFmt'><code>&#036;PageRedirectFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#PageSearchForm'><code>&#036;PageSearchForm</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#PubDirUrl'><code>&#036;PubDirUrl</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#RCLinesMax'><code>&#036;RCLinesMax</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#RecentChangesFmt'><code>&#036;RecentChangesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#RecentUploadsFmt'><code>&#036;RecentUploadsFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#ROEPatterns'><code>&#036;ROEPatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.EditVariables.html#ROSPatterns'><code>&#036;ROSPatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.EditVariables.html'>EditVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#ScriptUrl'><code>&#036;ScriptUrl</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#SearchBoxInputType'><code>&#036;SearchBoxInputType</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#SearchBoxOpt'><code>&#036;SearchBoxOpt</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PagelistVariables.html#SearchPatterns'><code>&#036;SearchPatterns</code></a></td><td><a 
+      href='index.php-n=PmWiki.PagelistVariables.html'>PagelistVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#SessionDecode'><code>&#036;SessionDecode</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.SecurityVariables.html#SessionEncode'><code>&#036;SessionEncode</code></a></td><td><a 
+      href='index.php-n=PmWiki.SecurityVariables.html'>SecurityVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#SimpleTableDefaultClassName'><code>&#036;SimpleTableDefaultClassName</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#SiteAdminGroup'><code>&#036;SiteAdminGroup</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#SiteGroup'><code>&#036;SiteGroup</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#Skin'><code>&#036;Skin</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#SkinDir'><code>&#036;SkinDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#SkinDirUrl'><code>&#036;SkinDirUrl</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#SkinLibDirs'><code>&#036;SkinLibDirs</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#SpaceWikiWords'><code>&#036;SpaceWikiWords</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#TableCellAlignFmt'><code>&#036;TableCellAlignFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#TableCellAttrFmt'><code>&#036;TableCellAttrFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#TableRowAttrFmt'><code>&#036;TableRowAttrFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#TableRowIndexMax'><code>&#036;TableRowIndexMax</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#TimeFmt'><code>&#036;TimeFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadBlacklist'><code>&#036;UploadBlacklist</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadDir'><code>&#036;UploadDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadDirQuota'><code>&#036;UploadDirQuota</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadExtSize'><code>&#036;UploadExtSize</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadMaxSize'><code>&#036;UploadMaxSize</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadNameChars'><code>&#036;UploadNameChars</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadPermAdd'><code>&#036;UploadPermAdd</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadPermSet'><code>&#036;UploadPermSet</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadPrefixFmt'><code>&#036;UploadPrefixFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadPrefixQuota'><code>&#036;UploadPrefixQuota</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.UploadVariables.html#UploadUrlFmt'><code>&#036;UploadUrlFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.UploadVariables.html'>UploadVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#UrlLinkFmt'><code>&#036;UrlLinkFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.I18nVariables.html#VarPagesFmt'><code>&#036;VarPagesFmt</code></a></td><td><a 
+      href='index.php-n=PmWiki.I18nVariables.html'>I18nVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#Version'><code>&#036;Version</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#VersionNum'><code>&#036;VersionNum</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#WikiDir'><code>&#036;WikiDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#WikiLibDirs'><code>&#036;WikiLibDirs</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#WikiStyle'><code>&#036;WikiStyle</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#WikiStyleApply'><code>&#036;WikiStyleApply</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LayoutVariables.html#WikiTitle'><code>&#036;WikiTitle</code></a></td><td><a 
+      href='index.php-n=PmWiki.LayoutVariables.html'>LayoutVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#WikiWordCount'><code>&#036;WikiWordCount</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.LinkVariables.html#WikiWordCountMax'><code>&#036;WikiWordCountMax</code></a></td><td><a 
+      href='index.php-n=PmWiki.LinkVariables.html'>LinkVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.BasicVariables.html#WikiWordPattern'><code>&#036;WikiWordPattern</code></a></td><td><a 
+      href='index.php-n=PmWiki.BasicVariables.html'>BasicVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.PathVariables.html#WorkDir'><code>&#036;WorkDir</code></a></td><td><a 
+      href='index.php-n=PmWiki.PathVariables.html'>PathVariables</a></td></tr>
+<tr><td><a class='varlink' 
+      href='index.php-n=PmWiki.I18nVariables.html#XLLangs'><code>&#036;XLLangs</code></a></td><td><a 
+      href='index.php-n=PmWiki.I18nVariables.html'>I18nVariables</a></td></tr>
+</table>
+<p><a name='indexend' id='indexend'></a>
+</p></div>
+<p class='vspace'>This page documents the PHP variables available in PmWiki for <a class='wikilink' href='index.php-n=PmWiki.LocalCustomizations.html'>local customizations</a>.  Much of this documentation is still incomplete but people are working on it now.  Feel free to add placeholders for variables you want to have documented if you don't know what the variable does.
+</p>
+<p class='vspace'>The variables documentation is divided into several pages:
+</p>
+<div class='vspace'></div><ul><li><a class='wikilink' href='index.php-n=PmWiki.BasicVariables.html'>Basic Variables</a>    - core variables
+</li><li><a class='wikilink' href='index.php-n=PmWiki.DebugVariables.html'>Debug Variables</a>    - variables useful for debugging
+</li><li><a class='wikilink' href='index.php-n=PmWiki.EditVariables.html'>Edit Variables</a>     - variables used when editing pages
+</li><li><a class='wikilink' href='index.php-n=PmWiki.I18nVariables.html'>I18n Variables</a>     - variables used for internationalization (i18n)
+</li><li><a class='wikilink' href='index.php-n=PmWiki.LayoutVariables.html'>Layout Variables</a>   - variables that control page layout
+</li><li><a class='wikilink' href='index.php-n=PmWiki.LinkVariables.html'>Link Variables</a>     - variables that control the display of links in pages
+</li><li><a class='wikilink' href='index.php-n=PmWiki.OtherVariables.html'>Other Variables</a>    - Variables not yet classified
+</li><li><a class='wikilink' href='index.php-n=PmWiki.PagelistVariables.html'>Pagelist Variables</a> - variables used with <a class='wikilink' href='index.php-n=PmWiki.PageLists.html'>page lists</a> and search results
+</li><li><a class='wikilink' href='index.php-n=PmWiki.PathVariables.html'>Path Variables</a>     - variables used to specify various locations on the server
+</li><li><a class='wikilink' href='index.php-n=PmWiki.SecurityVariables.html'>Security Variables</a> - variables crucial for site security
+</li><li><a class='wikilink' href='index.php-n=PmWiki.UploadVariables.html'>Upload Variables</a>   - Variables used for uploads/attachments
+</li></ul><p class='vspace'>The following functions are also controlled by several variables:
+</p><ul><li><a class='wikilink' href='index.php-n=PmWiki.Blocklist.html#variables'>Blocklist</a> - Blocking IP addresses, phrases, and expressions to counteract spam and vandalism.
+</li><li><a class='wikilink' href='index.php-n=PmWiki.Notify.html#variables'>Notify</a>    - How to receive email messages whenever pages are changed on the whole wiki site, individual groups or selected watchlists of pages
+</li><li  style='display: none;'><a class='wikilink' href='index.php-n=PmWiki.BasicVariables.html'>Basic Variables</a>  to provide circular trail
+</li></ul><p class='vspace'>The following variables are used in page markup.
+</p><ul><li><a class='wikilink' href='index.php-n=PmWiki.PageVariables.html'>Page Variables</a>      - variables that are associated with pages
+</li><li><a class='wikilink' href='index.php-n=PmWiki.PageTextVariables.html'>Page TextVariables</a>  - Page variables automatically made available through natural or explicit page markup
+</li></ul><p class='vspace'>An complete index of documented PHP variables is given below.
+</p>
+<p class='vspace'>In general, variables with names ending in 'Fmt' (such as &#36;PageLayoutFmt) have their values processed for $-variable substitutions prior to being output.  Thus strings such as <code class='escaped'>{$Name}</code> and <code class='escaped'>{$PageUrl}</code> are replaced with the name and URL of the page when the string is printed.
+</p>
+<p class='vspace'>Note: The automatic variable index and link generation is done by scripts/vardoc.php using <a class='varlink' href='index.php-n=PmWiki.I18nVariables.html#VarPagesFmt'><code class='varlink'>&#36;VarPagesFmt</code></a> to find the pages containing trails of pages with the variable documentation.
+</p>
+<p class='vspace'>There is a slight discrepancy between index generation and link generation: The index generation finds lines starting with a colon followed by "$" and an uppercase word. In contrast, the automatic link generation works only with WikiWords (<a class='varlink' href='index.php-n=PmWiki.BasicVariables.html#WikiWordPattern'><code class='varlink'>&#36;WikiWordPattern</code></a>) preceded by "$". Therefore all "non WikiWord" variables are shown as link only in the list below, but not elsewhere in PmWiki, as <a class='varlink' href='index.php-n=PmWiki.BasicVariables.html#Author'><code class='varlink'>&#36;Author</code></a>, $Version and $XL.
+</p>
+<div class='vspace'></div><h2>See Also</h2>
+<ul><li> <a class='wikilink' href='index.php-n=PmWiki.Functions.html'>Functions</a>   - How some of the functions in pmwiki.php work 
+</li></ul><p class='vspace'>Categories: <a class='categorylink' href='index.php-n=Category.PmWikiDeveloper.html'>PmWiki Developer</a>
+ 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&lt; <a class='wikilink' href='index.php-n=PmWiki.UrlApprovals.html'>Url approvals</a> | <a class='wikilink' href='index.php-n=PmWiki.DocumentationIndex.html#trailstart'>Documentation Index</a> | <a class='wikilink' href='index.php-n=PmWiki.Functions.html'>Functions</a> &gt;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Variables' rel='nofollow'>PmWiki:Variables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Variables-Talk' rel='nofollow'>PmWiki:Variables-Talk</a>.
+</p></div>
+</div>
+
+</div>
+
+	    	</td>
+  	</tr>
+	</table>
+
+   </td>
+   <td width=200 align=right valign=top><br>
+
+   <table cellspacing="2" cellpadding="0" border="0" width=200
+bgcolor="#CCCFD6">
+      <tr><td id='wikiright' height=2075 valign=top>
+         <p  style='text-align: right;'> <a class='urllink' href='http://rednoise.org/~dhowe/' rel='nofollow'><strong><span style='font-size:83%'>Instructor: Dr. Daniel C. Howe</span></strong></a>
+</p><h1>Resources</h1>
+<ul><li><a class='urllink' href='http://p-dpa.net/' rel='nofollow'>Post-Digital</a>
+</li><li><a class='urllink' href='http://www.arras.net/' rel='nofollow'>Arras.Net</a>
+</li><li><a class='urllink' href='http://iloveepoetry.com/' rel='nofollow'>I Love ePoetry</a>
+</li><li><a class='urllink' href='http://whitney.org/Exhibitions/Artport/Commissions/Codedoc' rel='nofollow'>CODeDoc</a>
+</li><li><a class='urllink' href='http://www.thecontinentalreview.com/' rel='nofollow'>ContinentalReview</a>
+</li><li><a class='urllink' href='http://www.drunkenboat.com/' rel='nofollow'>DrunkenBoat</a>
+</li><li><a class='urllink' href='http://www.eastgate.com/ReadingRoom.html#' rel='nofollow'>Eastgate Systems</a>
+</li><li><a class='urllink' href='http://www.electronicbookreview.com/' rel='nofollow'>Electronic Book Review</a>
+</li><li><a class='urllink' href='https://eliterature.org/' rel='nofollow'>The Electronic Literature Org.</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/1/' rel='nofollow'>E-Literature Collection 1</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/2/' rel='nofollow'>E-Literature Collection 2</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/3/' rel='nofollow'>E-Literature Collection 3</a>
+</li><li><a class='urllink' href='http://newhorizons.eliterature.org/index.php.html' rel='nofollow'>New Horizons For The Literary</a>
+</li><li><a class='urllink' href='http://writing.upenn.edu/epc/' rel='nofollow'>Electronic Poetry Center</a>
+</li><li><a class='urllink' href='https://elmcip.net/' rel='nofollow'>The ELMCIP Database</a>
+</li><li><a class='urllink' href='https://grandtextauto.soe.ucsc.edu/' rel='nofollow'>Grand Text Auto</a>
+</li><li><a class='urllink' href='http://www.writing.upenn.edu/wh/' rel='nofollow'>Kelly Writers House</a>
+</li><li><a class='urllink' href='https://www.cddc.vt.edu/journals/newriver/' rel='nofollow'>New River Journal</a>
+</li><li><a class='urllink' href='http://nt2.uqam.ca/en/search/site/?f%5B0%5D=type:repertoire&retain-filters=1' rel='nofollow'>ALN / NT2</a>
+</li><li><a class='urllink' href='http://www.writing.upenn.edu/pennsound/' rel='nofollow'>PENNsound</a>
+</li><li><a class='urllink' href='http://www.ubu.com/' rel='nofollow'>UbuWeb</a> 
+</li><li><a class='urllink' href='http://www.springgunpress.com' rel='nofollow'>Spring Gun Journal</a>
+</li><li><a class='urllink' href='http://www.turbulence.org/' rel='nofollow'>Turbulence</a>
+</li><li><a class='urllink' href='http://artport.whitney.org/' rel='nofollow'>The Whitney ARTPORT</a>
+</li><li><a class='urllink' href='http://cellproject.net/' rel='nofollow'>E-Literature Consortium</a>
+</li><li><a class='urllink' href='http://paper.li/eliterature' rel='nofollow'>This Week in E-Lit</a>
+</li></ul><p class='vspace'><br />
+</p><ul><li><a class='wikilink' href='index.php-n=Site.RightSideBar_action=edit.html'>SideBar</a>
+</li></ul>
+
+         <!--Main.SideBar-->
+      </td></tr>
+    </table>
+
+  </td>
+</tr>
+</table>
+
+</td>
+</tr>
+<!--PageFooterFmt-->
+<tr>
+  <td align="right" class="update">
+    <div class='lastmod'>Page last modified on January 27, 2015, at 04:16 PM EST</div></div>
+  </td>
+</tr>
+<!--/PageFooterFmt-->
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="right" class="copyright">
+	&copy;howe
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+// Text-to-speech from the free tts-api API
+
+import ddf.minim.*;
+
+String endpoint = "http://tts-api.com/tts.mp3?q=%QUERY%&return_url=1";
+String query = "Writing+Digital+Media";
+
+void setup() {
+
+  String url = endpoint.replace("%QUERY%",query);
+  String[] result = loadStrings(url);
+  new Minim(this).loadFile(result[0]).play();
+}
+
+void draw() { // required by Minim
+}

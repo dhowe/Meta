@@ -1,0 +1,16 @@
+
+// Loop a sound file with one line 
+
+import ddf.minim.*;
+
+void setup() {
+
+
+  new Minim(this).loadFile("loop3.mp3").loop();
+}
+
+void draw() {
+
+  // Note: due to a bug in Minim, a draw() method is ALWAYS required when using sound.
+
+}

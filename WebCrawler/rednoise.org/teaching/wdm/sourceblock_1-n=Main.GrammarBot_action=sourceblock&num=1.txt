@@ -1,0 +1,43 @@
+
+import rita.*;
+import tweeter.*; // be sure to include your keys
+
+
+RiGrammar grammar;
+
+
+void setup()
+{
+  size(650, 200);
+
+  grammar = new RiGrammar(this);
+
+  // haiku.json is a file in the 'data' folder
+  grammar.loadFrom("haiku.json");
+}
+
+
+void draw()
+{
+   String s = createTweet();
+
+   println("-----------"+s.length()+"\n"+s);
+
+   //new Tweeter(ckey, csec, atok, asec).post(s);
+
+   delay(3000);
+}
+
+
+String createTweet()
+{
+  String tweet = null;
+
+  while (tweet == null || tweet.length () > 140) {
+
+    String tmp = grammar.expand();
+    tweet = tmp.replaceAll("% *","\n");
+  }  
+
+  return tweet;
+}

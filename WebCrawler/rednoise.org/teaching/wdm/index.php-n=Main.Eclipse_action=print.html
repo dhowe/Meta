@@ -1,0 +1,115 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | Main / Eclipse</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=Main.HomePage.html'>Main: Eclipse</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<h3>Using Processing with Eclipse</h3>
+<p><br />
+&nbsp;&nbsp;&nbsp;<strong><a class='urllink' href='http://www.rednoise.org/ep5/' rel='nofollow'></strong>EclipseP5Exporter<strong></a> || <a class='wikilink' href='index.php-n=Main.ProcessingApps_action=print.html'>Processing Applications</a> || <a class='wikilink' href='index.php-n=Main.EclipseAndLibs_action=print.html'>RiTa/OpenGL and Eclipse</a> || <a class='wikilink' href='index.php-n=Main.EclipseShortcuts_action=print.html'>Useful ShortCuts</a></strong>
+</p>
+<p class='vspace'><br />
+</p>
+<p class='vspace'>Note: Getting a heap memory error?  To increase the memory size for an application in Eclipse, go to Menu: Run -&gt; Run-configurations -&gt; Arguments -&gt; VM-Arguments and add the following (for 384 mb of heap space):  -Xmx384m
+</p>
+<p class='vspace'><br />
+<em>NOTE: Many the steps below are now fully automated by the new <a class='urllink' href='http://code.google.com/p/proclipsing/' rel='nofollow'>Proclipsing</a> plugin -- see Proclipsing instructions <a class='urllink' href='http://code.google.com/p/proclipsing/wiki/GettingStarted' rel='nofollow'>here</a></em>
+</p>
+<div class='vspace'></div><div class='indent'><em>If you have already installed and tested eclipse, skip to step 10.</em>
+</div><div class='vspace'></div><ol><li>Go to the eclipse [<a class='urllink' href='http://www.eclipse.org/downloads/' rel='nofollow'>http://www.eclipse.org/downloads/</a> | downloads page]] and download the latest version of Eclipse (choose 'Eclipse IDE for Java Developers') to the desktop.
+<div class='vspace'></div></li><li>If necessary, extract the archive file to the desktop (double-clicking will generally do this)
+<div class='vspace'></div></li><li>Drag the eclipse folder into /Applications (mac), or into a convenient place on windows, e.g., C:\Eclipse
+<div class='vspace'></div></li><li>OPTIONAL: drag Eclipse into the dock (mac), or into the quick-launch bar (win) to create a convenient shortcut
+<div class='vspace'></div></li><li>Double-click Eclipse.app or Eclipse.exe (the program) to run Eclipse
+<div class='vspace'></div></li><li>Eclipse will ask for a workspace location (accept the default location or choose one of your own that is memorable). 
+<div class='vspace'></div></li><li>If the welcome screen pops up, close it.
+<div class='vspace'></div></li><li>Create a test Java Application (if you've already run a Java app from eclipse, you can skip to step 10.)
+<div class='vspace'></div><ol><li>Create new project: (Menu) File &gt; New &gt; Java Project
+</li><li>Set the project name, e.g., FirstJavaProject
+</li><li>Leave all defaults, click 'Finish'
+</li><li>Create a new class in the project: File -&gt; New -&gt; Class
+</li><li>Set the class name, e.g., HelloWorld
+</li><li>Leave all defaults, click 'Finish'
+<div class='vspace'></div></li><li>Add the following text to the file (inside the class):<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello World!");<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+</li></ol><div class='vspace'></div></li><li>Run your application: Run -&gt; Run-As -&gt; Java Application. You should see your output text appear in the console window.
+</li></ol><div class='vspace'></div><hr />
+<p class='vspace'><strong>10. Now create a simple Processing application</strong>
+</p>
+<div class='vspace'></div><ol><li>Create a new package in your project: File &gt; New &gt; Package (Using packages is generally a good idea and Processing will complain if you don't)
+<div class='vspace'></div></li><li>Package name: mypackage
+<div class='vspace'></div></li><li>Create new class inside the package: File &gt; New &gt; Class
+<div class='vspace'></div></li><li>Class Name: HelloProcessing
+<div class='vspace'></div></li><li>Leave all defaults, click 'Finish'.
+<div class='vspace'></div></li><li>Next we need to copy the Processing classes (core.jar) into our project. 
+<div class='vspace'></div><ol><li>The location of this file will vary depending on where you installed Processing, but on Windows it might be C:\Program Files\Processing1.x\lib\core.jar. On a Mac, Processing will usually be in /Applications/Processing1.x, but to view the contents of this directory you must first right-click and choose 'Show Package Contents', then navigate down (via the  to Contents/Resources/Java/core.jar). 
+<div class='vspace'></div></li><li>Copy/Paste or Drag &amp; Drop the core.jar file into your Eclipse project (at the top level is fine). If you Copy/Paste, you may need to refresh your project before it shows up (Eclipse-&gt;File-&gt;Refresh).
+<div class='vspace'></div></li><li>Next, right-click on the core.jar within Eclipse and select 'Build-Path'-&gt;'Add-to-Build-Path'. 
+<div class='vspace'></div></li><li>Note: You can also 'link' to jar files without copying them, but this can cause minor problems, especially on the Mac, so for new users I recommend the steps above.
+</li></ol><div class='vspace'></div></li><li>Now tell Java that you want it to 'import' the processing classes when it compiles your code by adding this line at the very top of your Java file (HelloProcessing.java):<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;import processing.core.*;
+<div class='vspace'></div></li><li>Below the import section, have your class (HelloProcessing) extend from PApplet as follows:<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public class HelloProcessing extends PApplet {<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<div class='vspace'></div></li><li>Inside the class, add the setup and draw functions that Processing expects (Important: be sure to add the 'public' modifier -- see screenshot below)<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public void setup() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size(400, 400);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public void draw() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background(255);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stroke(0);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipse(200,200,200,200);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;Note: do NOT use variables as arguments to size() as this will break the export function
+<div class='vspace'></div></li><li>Now run your applet: Run &gt; Run-As &gt; Java Applet. If all went according to plan, you should see your sketch pop up in the 'applet viewer' window, and any errors or messages should go to the eclipse console. Remember to test any sketches in a browser before posting them to the web; just b/c something runs in eclipse, doesn't (necessarily) mean it will run in either Processing or a web-browser.
+<div class='vspace'></div></li><li>Lastly, add an external file (a font or image or sound file) to your sketch and make sure you can load it in Eclipse. To do this, create a 'data' folder inside the 'src' directory  (File -&gt; New -&gt; Folder) in your Eclipse project, then drag or copy your external file into that. Add the usual code to your sketch to load it and give it a try. Note: again you may need to 'refresh' after adding new files: 'Eclipse-&gt;File-&gt;Refresh'.
+</li></ol><p class='vspace'>&nbsp;&nbsp;&nbsp;NOTE: See this <a class='wikilink' href='index.php-n=Main.ProcessingApps_action=print.html'>link</a> if you want to run your program as an application in Eclipse.
+</p>
+<p class='vspace'>&nbsp;&nbsp;&nbsp;NOTE: See this <a class='urllink' href='http://www.rednoise.org/ep5' rel='nofollow'>link</a> if you want to enable Processing-style exports from within Eclipse.
+</p>
+<p class='vspace'>&nbsp;&nbsp;&nbsp;NOTE: As of this writing, Processing supports up to Java 1.5. Therefore if you want to be Processing-compatible, make sure the 'Compiler-compliance-level' (in Eclipse-&gt;Preferences-&gt;Java-&gt;Compiler) is set to 1.5, not 1.6 (though you can still use the 1.6 JRE if you like.)
+</p>
+<p class='vspace'><br />
+</p>
+<table border='0' ><tr ><td ><span class='frame lfloat' style='background-color: #656565;'> <img src='uploads/ProcTest.jpg' alt='' title='' /></span></td></tr>
+<tr ><td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A 1st Processing program in Eclipse</td></tr>
+</table>
+<div class='vspace'></div><hr />
+<div class='vspace'></div>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=Main.Eclipse</div>
+    <div class='lastmod'>Page last modified on November 02, 2010, at 11:17 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+// The same example using p5.js (use any text-editor you like)
+// To run, just drag your file into Firefox or Chrome
+
+<html>
+<script src="http://cdn.jsdelivr.net/p5.js/0.3.5/p5.min.js"></script>
+<script>
+
+var ypos = 90;
+
+function setup() {
+
+  createCanvas(600,600); 
+  noStroke();
+}
+
+function draw() {
+
+  background(20,40,90);
+  textSize(36);
+  text("Godzilla was in the ", 50, 50);
+  text("fountain", 400, ypos);
+  ypos++;
+}
+
+</script>
+</html>

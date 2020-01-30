@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>My Test Page</title>
+<script src="libs/jquery-1.4.min.js"></script>
+<script>
+$(document).ready(function(){
+
+//Your code goes here.
+
+});
+</script>
+</head>
+<body>
+<div>I am a div.</div>
+<br />
+<input value="Go" type="submit">
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | Main / ProgramFlow</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=Main.HomePage.html'>Main: ProgramFlow</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<h3>Program Flow (in Processing)</h3>
+<p>As discussed, Processing provides two 'special' functions that you will use in each of your programs: "setup" and "draw". Like any function, there can only be one (each) of these, and they must have the exact signature (case-sensitive) as you see below, otherwise they will not be called by Processing.
+</p>
+<p class='vspace'><strong>setup()</strong>
+</p>
+<p class='vspace'>The setup function is run once (called automatically), at the start of every Processing program. It is typically used to set things like size(this should generally be first), frameRate (how fast the pgroam runs), to load fonts and other media(images, sound files, video, etc.) and do other things that only need to happen once.
+</p>
+<div class='vspace'></div><pre>        void setup()
+        {
+            // YOUR CODE IS RUN ONCE AT STARTUP
+        }
+</pre><p class='vspace'><strong>draw()</strong>
+</p>
+<p class='vspace'>The draw function is executed in a loop (also called automatically). It is run continuously throughout the execution of the program.
+</p>
+<div class='vspace'></div><pre>        void draw()
+        {
+            // YOUR CODE IS RUN OVER AND OVER AGAIN
+        }
+</pre><p class='vspace'><strong>stop()</strong> [optional]
+</p>
+<p class='vspace'>The stop() function is optional and (like 'startup') will be executed exactly once, when the program exits.
+</p>
+<div class='vspace'></div><pre>       void stop()
+        {
+            // YOUR CODE IS RUN ONCE AT END OF PROGRAM
+        }
+</pre><div class='vspace'></div><hr />   
+<p class='vspace'>Here's a common use of setup():
+</p>
+<div class='vspace'></div><pre>        // Notice that we (generally) declare our variables 
+        // at the top, outside of both setup() and draw().
+        // For more info on this, see <a class='wikilink' href='index.php-n=Main.Variables_action=print.html'>variable scope</a>
+
+        int myInt = 0;  
+
+        void setup()
+        {
+            size(500,500);
+            background(255,255,255);
+            frameRate(15);  // Defines how many times per second draw() will run
+            fill(255,0,0);  // (red,green,blue [0-255])
+            stroke(0,0,0);  // (red,green,blue [0-255])
+        }
+</pre><div class='vspace'></div><hr />
+<p class='vspace'>Here's a simple draw() which includes some variable usage (see the 'int myInt = 0;' line above):
+</p>
+<div class='vspace'></div><pre>        void draw()
+        {            
+            rect(myInt, myInt, 50, 50);  
+            myInt = myInt + 1;
+        }
+</pre><p class='vspace'>If we copy these lines of code into Processing we will see a rectangle move from the top left of the screen down to the bottom right; a simple animation. The setup function sets up our window and the draw function runs 15 times per second, giving us the appearance of movement. 
+</p>
+<div class='vspace'></div><hr />
+<p>Here's a typical stop() function:
+</p>
+<div class='vspace'></div><pre>        void stop()
+        {
+           DirtyLibrary.stop(this);
+        }
+</pre><p class='vspace'>The stop() function is where you'd do any clean-up of resources you've used. Often, calls to a library's stop() method are placed here so the library knows to do its own clean-up. 
+</p>
+<p class='vspace'>If you're not using a library that requires it, or doing something fancy, you can generally leave out this method. 
+</p>
+<div class='vspace'></div><hr />
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=Main.ProgramFlow</div>
+    <div class='lastmod'>Page last modified on February 09, 2008, at 01:11 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

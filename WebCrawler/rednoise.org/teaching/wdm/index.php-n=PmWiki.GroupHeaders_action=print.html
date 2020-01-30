@@ -1,0 +1,104 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | PmWiki / GroupHeaders and GroupFooters</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=PmWiki.PmWiki.html'>PmWiki: GroupHeaders and GroupFooters</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p>Every <a class='wikilink' href='index.php-n=PmWiki.WikiGroup_action=print.html'>WikiGroup</a> can have GroupHeader and GroupFooter pages that contain markup that should be included at the beginning or end of each page within the group. This feature is useful for:
+</p>
+<div class='vspace'></div><ul><li>adding a disclaimer or heading to all of the pages of a group
+</li><li>defining custom <a class='wikilink' href='index.php-n=PmWiki.WikiStyles_action=print.html'>WikiStyles</a> that may be used for all pages in a group
+</li><li>replacing the default headers and/or footers for pages in a group (e.g., using <code class='escaped'>(:noheader:)</code> and or <code class='escaped'>(:nofooter:)</code> -- see <a class='wikilink' href='index.php-n=PmWiki.PageDirectives_action=print.html'>PageDirectives</a>).
+</li></ul><p class='vspace'>To create a group header, just create a new page called <code class='escaped'>YourGroup.GroupHeader</code>. Group headers allow authors to create groups with custom headers and footers without having to coordinate with a <a class='wikilink' href='index.php-n=PmWiki.WikiAdministrator_action=print.html'>wiki administrator</a>.  
+</p>
+<p class='vspace'>The default GroupHeader or GroupFooter can be suppressed on an individual page (such as a group's HomePage) by using the <code class='escaped'>(:nogroupheader:)</code> and <code class='escaped'>(:nogroupfooter:)</code> markups <em>on that page</em>.
+</p>
+<p class='vspace'>If a generic GroupHeader is used in one wikigroup (say, the Site wikigroup), then the code can be easily duplicated in the GroupHeader of any other group by using 
+<code class='escaped'>(:include Site.GroupHeader:)</code>.  See <a class='wikilink' href='index.php-n=PmWiki.IncludeOtherPages_action=print.html'>IncludeOtherPages</a>.
+</p>
+<p class='vspace'>If you want a header or footer to appear when you print a page (action <strong>print</strong>), simply create a page called <code class='escaped'>YourGroup.GroupPrintHeader</code> or <code class='escaped'>YourGroup.GroupPrintFooter</code> and fill it with your markup.
+</p>
+<p class='vspace'>You can also set the variable <a class='wikilink' href='index.php-n=PmWiki.LayoutVariables_action=print.html'><code class='escaped'>$GroupPrintHeaderFmt</code></a> and <a class='wikilink' href='index.php-n=PmWiki.LayoutVariables_action=print.html'><code class='escaped'>$GroupPrintFooterFmt</code></a> in the same way as <code class='escaped'>$GroupHeaderFmt</code> and <code class='escaped'>GroupFooterFmt</code> in order to change the header used when <code class='escaped'>action=print</code>. 
+</p>
+<p class='vspace'>See also
+</p><ul><li><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/All%20group%20header' rel='nofollow'>Cookbook:All group header</a> <span style='font-size:83%'>  </span>
+</li><li><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Wiki%20footer' rel='nofollow'>Cookbook:Wiki footer</a> <span style='font-size:83%'>  </span>
+</li></ul><div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='vspace question'> How do I set the same header or footer for all pages/groups?</p>
+<p> The header and footer for each page are controlled by the variables <a class='varlink' href='index.php-n=PmWiki.LayoutVariables.html#GroupHeaderFmt'><code class='varlink'>&#36;GroupHeaderFmt</code></a> and <a class='varlink' href='index.php-n=PmWiki.LayoutVariables.html#GroupFooterFmt'><code class='varlink'>&#36;GroupFooterFmt</code></a>. If your site-wide header and footer pages are Site.SiteHeader and Site.SiteFooter, you can add this in config.php:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+### If you use Site.SiteHeader and Group.GroupHeader
+$GroupHeaderFmt = '(:include {$SiteGroup}.SiteHeader'
+  . ' basepage={*$FullName}:)(:nl:)' . $GroupHeaderFmt;
+
+### If you use Site.SiteHeader instead of Group.GroupHeader
+$GroupHeaderFmt = '(:include {$SiteGroup}.SiteHeader'
+  . ' basepage={*$FullName}:)(:nl:)';
+
+### If you use Site.SiteFooter and Group.GroupFooter
+$GroupFooterFmt .= '(:nl:)(:include {$SiteGroup}.SiteFooter'
+  . ' basepage={*$FullName}:)';
+
+### If you use Site.SiteFooter instead of Group.GroupFooter
+$GroupFooterFmt = '(:nl:)(:include {$SiteGroup}.SiteFooter'
+  . ' basepage={*$FullName}:)';
+</pre>
+</div><p class='vspace'>Note that single quotes must be used in the lines above.
+</p>
+<p class='vspace'>See also the <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/AllGroupHeader' rel='nofollow'>Cookbook:AllGroupHeader</a> recipe.
+</p>
+<p class='vspace'> Instead of using an additional page, you could set any wiki text in <a class='varlink' href='index.php-n=PmWiki.LayoutVariables.html#GroupHeaderFmt'><code class='varlink'>&#36;GroupHeaderFmt</code></a>, for example:
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>$GroupHeaderFmt .= "Global message here.";</code>
+</div></div>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=PmWiki.GroupHeaders</div>
+    <div class='lastmod'>Page last modified on February 26, 2013, at 11:15 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

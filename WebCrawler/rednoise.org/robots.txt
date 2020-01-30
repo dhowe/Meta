@@ -1,0 +1,20 @@
+# Rule 1
+User-agent: *
+Disallow: /processing.hk
+Disallow: /dialogic-web
+Disallow: /music
+Disallow: /spectre
+Disallow: /sp-images
+Disallow: /sketches
+Disallow: /video
+Disallow: /spark
+Disallow: /readings
+Disallow: /thompson
+Disallow: /bad-tm
+Disallow: /adn-test
+Disallow: /daniel/saic
+Disallow: /daniel/sketchpad
+Disallow: /daniel/students
+Disallow: /daniel/aarhus
+Disallow: /daniel/ucsd.html
+Disallow: /daniel/cornell.html

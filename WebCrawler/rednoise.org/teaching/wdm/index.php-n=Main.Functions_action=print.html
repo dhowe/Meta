@@ -1,0 +1,124 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | Main / Functions</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=Main.HomePage.html'>Main: Functions</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<h2>Methods (also called 'functions')</h2>
+<p>"[Methods] break large computing tasks into smaller ones, and enable people to build on what others have done instead of starting over from scratch." -Kernigan &amp; Ritchie
+</p>
+<p class='vspace'>In Processing, we've been using methods (often referred to as 'functions') all along. When we say "line(0,0,200,200)" we are calling the method "line", a 'built-in' function of the processing environment (actually it belongs to the PApplet class, but for now we can consider it 'built-in'.)
+</p>
+<p class='vspace'>When we say "void setup()", we are writing a definition for the "setup" method, a special processing method that is automatically called when the program first starts (other automatically-called Processing methods we've seen include: "draw" and "mouseClicked")
+</p>
+<p class='vspace'>A method, whether 'built-in', or defined by you, has three parts which are specified in its declaration (or definition):
+</p>
+<div class='vspace'></div><ol><li>the method name
+</li><li>the return type
+</li><li>the parameters
+</li></ol><p class='vspace'>A method declaration looks like this:
+</p>
+<div class='vspace'></div><pre>  ReturnType methodName(parameter-list) 
+  {
+    the code of the method 
+  }
+</pre><p class='vspace'>Here's a simple example:
+</p>
+<div class='vspace'></div><pre>  void sayHello() 
+  {
+    println("I'm saying hello!");
+  }
+</pre><p class='vspace'>This is a simple method that performs one basic task -- printing the phrase "I'm saying hello!"). Its method name is " sayHello".  It doesn't return anything so we label its return type as "void". It has no parameters (also called argurments) and so nothing is placed in between the parentheses (Note: the empty parentheses are required). We can call the method (and thus execute its code) like this:
+</p>
+<div class='vspace'></div><pre>  void setup() 
+  {
+    size (300,300);
+
+    // call the method here
+    sayHello();
+
+    // do other stuff
+  }
+</pre><p class='vspace'><strong>Return Types and Parameters</strong>
+</p>
+<p class='vspace'>Ok, now let's look at an example that makes use of a <em>return-type</em> and <em>parameters</em>:
+</p>
+<div class='vspace'></div><pre>  int add(int a, int b) 
+  {
+    int sum = 0;
+    sum = a + b;
+
+    return sum;
+  }
+</pre><p class='vspace'>In the first line above (the method declaration), the first word is "int" -- which declares "int" as the "return" type for the method. Second, we have the word "add", which is our name for the method. Much like declaring a variable name, we can use any word we want, staying away from already defined keywords (built-in processing method names, etc.) Finally, we have some stuff in between the parentheses. These are called "parameters" and we can have as many of them as we like (including zero as in the "sayHello" case above). Here we have two ('a' and 'b', both of which are of type "int".
+</p>
+<p class='vspace'>So, what are all these things doing? Consider the following code:
+</p>
+<div class='vspace'></div><pre>  int x = 5;
+  int y = 7;
+  int total = 0;
+
+  total = add(x, y); 
+
+  println(total);
+</pre><p class='vspace'>In the above code, the method "add" is being called, with two parameters (x and y) and the result of that method is then returned and assigned to (or stored in) the variable "total".
+</p>
+<div class='vspace'></div><ul><li>Return-type: The function add has a return-type of "int." This means that at the end of the method, we will have a statement "return x;" where x is some int value to be sent back to the program. We need to store this value in some variable (<em>total</em> in the case above) or else it is lost when the method ends.
+<div class='vspace'></div></li><li>Parameters: Here we pass x and y to the "add" method, which hold the values 5 and 7, respectively. These are also called the 'arguments.' Parameters passed to a method arrive in the same order as they were sent. The first argument lands in the first parameter, second in the second, and so on. Variables passed as parameters must have the same type as specified in the method definition, that is, x and y (in this case) must be of type "int".
+<div class='vspace'></div></li><li>Local Variables -- notice that the above method "add" declares another variable called "sum" which it uses to compute the value of (a + b). Such variables are called 'local' variables, because they live only within the function. They are created each time the method is called (or "invoked"), and destroyed when the method finished and 'returns'. Such variables are not accessible to the rest of the program. 
+</li></ul><p class='vspace'><strong>Things to remember</strong>
+</p>
+<div class='vspace'></div><ul><li>A method must always have a return type. If it doesn't return anything, we declare the return-type as "void".
+<div class='vspace'></div></li><li> The value you pass as an argument to a method can be a literal value (20, 4.3, "hello", etc.) or a variable of the specified type (e.g., int, String, RiText, etc.)
+<div class='vspace'></div></li><li>If the return-type is something other than "void", your method <strong>must</strong> return a value compatible with (of the same type as) the return-type.
+</li></ul><div class='vspace'></div>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=Main.Functions</div>
+    <div class='lastmod'>Page last modified on April 10, 2009, at 10:28 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

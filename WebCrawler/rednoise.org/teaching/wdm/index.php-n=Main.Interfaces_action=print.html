@@ -1,0 +1,123 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Writing Digital Media | Main / Interfaces</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Writing Digital Media</h3>
+    <h1 class='pagename'><a href='index.php-n=Main.HomePage.html'>Main: Interfaces</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p><strong> Interfaces</strong>
+</p>
+<p class='vspace'>An <em>interface</em> is a group of related methods with empty bodies. A bicycle's behavior, if specified as an interface, might appear as follows:
+</p>
+<div class='vspace'></div><pre> interface Bicycle {
+
+         public void changeGear(int newGear);
+
+         public void speedUp(float speedIncrement);
+
+         public void applyBrakes(float speedDecrement);
+  }
+</pre><p class='vspace'>Notice that an interface does not contain any variables, constructors, or method bodies, just the method signatures. To implement this interface with one of your classes (e.g., AcmeBicycle),  you'd use the 'implements' keyword in your class declaration as follows:
+</p>
+<div class='vspace'></div><pre>  class AcmeBicycle implements Bicycle {
+
+         //  the class MUST contain the methods 
+         //  above, in addition to any others...
+
+  }
+</pre><p class='vspace'>Implementing an interface allows a class to be more formal about the behavior it promises to provide. Interfaces form a contract between the class and the outside world, and this contract is enforced by the compiler. If your class claims to implement an interface, ALL the methods listed in that interface must appear in its source code (with method bodies) or the class will not compile.
+</p>
+<div class='vspace'></div><hr />
+<p class='vspace'><strong>Abstract Classes</strong>
+</p>
+<p class='vspace'>An <em>abstract class</em> is a just like a regular class except that it cannot be instantiated.
+Generally, abstract classes contain one or more abstract methods, which look just like the ones in the interface example above. The difference is that abstract classes can also contain variables, constructors, and other fully-implemented methods. An example of an abstract class representing a bicycle follows:
+</p>
+<p class='vspace'>abstract class Bicycle {
+</p>
+<div class='vspace'></div><pre>         // some variables         
+         int gear;
+         float speed;
+         Color color;
+
+         // a constructor
+         Bicycle(Color theColor) {
+             color = theColor;
+         }
+
+         // a normal method
+         public void changeGear(int newGear) {
+            gear = newGear;
+         }
+
+         // an abstract method
+         public abstract void changeSpeed(float percent);
+
+  }
+</pre><p class='vspace'>Because the class is abstract, you cannot create (or <em>instantiate</em>) it using 'new'. Instead you must subclass it (via <em>extends</em>), and the subclass must provide 'bodies' for any abstract methods. To subclass this abstract class with one of your own classes (e.g., AcmeBicycle),  you'd use the 'extends' keyword in your class declaration as follows:
+</p>
+<div class='vspace'></div><pre>  class AcmeBicycle extends Bicycle {
+
+        // the class MUST contain any abstract methods
+        // above, in addition to the others you define...
+
+        public void changeSpeed(float percent) {
+           speed = speed * percent;
+        }
+
+  }
+</pre><p class='vspace'>Abstract classes are useful b/c you can put more of the 'guts' in the superclass, as opposed to interfaces, which can only have 'empty' methods. But, in Java, a class can only extend one other class (no multiple inheritance), so interfaces are often useful when your class has already 'extended' some other class (e.g, all of our Processing sketches which extend PApplet). 
+</p>
+<p class='vspace'>In the coming weeks we'll look at some cases where one might want to use interfaces and/or abstract classes and compare their pros and cons....
+</p>
+<div class='vspace'></div><hr />
+<div class='vspace'></div>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from https://rednoise.org/teaching/wdm/index.php?n=Main.Interfaces</div>
+    <div class='lastmod'>Page last modified on March 03, 2009, at 08:54 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

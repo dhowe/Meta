@@ -1,0 +1,33 @@
+
+String testFile = "testFile.txt";
+IntDict data = new IntDict();
+
+void setup() {
+  size(200, 200);
+  processFile(testFile);
+
+  // ...  print data to console
+}
+
+void draw() {
+
+  // ...
+}
+
+void processFile(String fileName) {
+
+  String[] lines = loadStrings(fileName);
+  // ...
+}
+
+int getFrequency(String character) {
+
+  // ...
+  return 0;
+}
+
+float getProbability(String character) {
+
+  // ...
+  return 0;
+}

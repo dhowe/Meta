@@ -1,0 +1,20 @@
+
+// Simple example using lerp()
+
+float x=50, y=50;
+
+void setup() {
+
+  size(500,500);
+  fill(100,200,0);
+  rectMode(CENTER);
+}
+
+void draw() {
+
+  background(50);
+  rect(x,y,20,20);
+
+  x = lerp(x, mouseX, .05);
+  y = lerp(y, mouseY, .05);
+}

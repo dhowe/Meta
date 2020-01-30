@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<!-- change fcfcfc -> 10004f   for dark borders -->
+
+<title>Writing Digital Media | Main / RegularExpressions browse</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<!-- Update these tags -->
+<meta name="description" content="programming for digital art and literature course web">
+<meta name="keywords" content="e-writing daniel howe programming digital art literature">
+
+<style type="text/css">@import url("pub/skins/evolver/evolver.css");
+  <!-- $PageInlineStyle  -->
+</style>
+
+<!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style>  <meta name='robots' content='index,follow' />
+
+</head>
+
+<body> 
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%"
+background="uploads/cardheader2.jpg"><!-- bgcolor=#4670ae -->
+
+<tr><td height=120 valign=top>
+
+<table cellspacing="0" cellpadding="5" border="0" height=100% width="1025">
+<tr>
+<!--td style="padding-left: 20px" align="left" valign="bottom"-->
+<td align="right" valign="bottom">
+	<table width=197 cellspacing="2" border="0" bgcolor="#cccfd6">
+	<tr>
+        <td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=Main.RegularExpressions_action=edit.html">edit</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=Main.RegularExpressions_action=upload.html">upload</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=Site.AllRecentChanges.html" rel="external">recent</a></td>
+<td bgcolor="#f9f9f9" class="action" align="center"><a class="navlink" href="index.php-n=Main.RegularExpressions_action=print.html" rel="external">print</a></td>
+	
+	</tr>
+	</table>
+</td>
+</tr></table>
+</td></tr>
+
+
+<tr>
+  <td><!-- top horizontal bar -->
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr><td height=0 bgcolor=#cccfd6></td></tr>
+    <tr>
+      <td bgcolor="#fcfcfc" style="padding-left: 10px">
+        <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+
+		<td valign="top" style="padding-top: 16px" bgcolor="#fcfcfc">
+
+<table cellspacing="2" cellpadding="0" border="0" bgcolor="#CCCFD6" width="100%">
+		<tr><td class="searchheader" height=20>
+        <strong><a href='index.php-n=Site.Search.html'>Search</a></strong>
+		     </td>
+    </tr>
+
+		<tr><td class="searchcell">
+       <form action='https://rednoise.org/teaching/wdm/index.php?n=Site.Search'>
+        <input type="hidden" name="pagename" value="Site/Search" />
+        <input class="navinput" size="10" type="text" name="q" value="" />
+        <input class="navbutton" type="submit" value="Go" />
+        </form>
+		  </td>
+    </tr>
+
+</table>
+		<br>
+<table cellspacing="2" cellpadding="0" border="0" bgcolor="#CCCFD6" width="100%">
+
+  <tr><td id='wikileft' height=2000
+valign=top>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<ul><li><a class='wikilink' href='index.php-n=Main.HomePage.html'><strong><span style='font-size:120%'>Home</span></strong></a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Main.Slides.html'>Slides</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Assignments.html'>Assignments</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Readings.html'>Readings</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Freedom.html'>Freedom</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Questions.html'>Questions</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Grading.html'>Grading</a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Main.Artists.html'>Artists</a>
+</li><li><a class='wikilink' href='index.php-n=Main.ShortShorts.html'>ShortShorts</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Presentations.html'>Presentations</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/rita/' rel='nofollow'>The RiTa Library</a>
+</li><li><a class='wikilink' href='index.php-n=Main.EditorExamples.html'>RiTa @p5js-editor</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Works.html'>ExampleWorks</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Exercises.html'>WritingIdeas</a>
+</li><li><a class='wikilink' href='index.php-n=Main.PoeticForms.html'>PoeticForms</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Techniques.html'>Techniques</a>
+</li><li><a class='wikilink' href='index.php-n=Main.TwitterBots.html'>TwitterBots</a>
+<div class='vspace'></div></li><li><a class='urllink' href='http://processing.org/reference/' rel='nofollow'>P5.js Reference</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/rita/reference' rel='nofollow'>The RiTa API</a>
+</li><li><a class='urllink' href='http://www.rednoise.org/tweeter/doc' rel='nofollow'>Tweeter API</a>
+</li><li><a class='urllink' href='http://docs.oracle.com/javase/6/docs/api' rel='nofollow'>Java API</a>
+</li><li><a class='urllink' href='http://processing.org/reference/' rel='nofollow'>Processing API</a>
+</li><li><a class='urllink' href='http://twitter4j.org/oldjavadocs/4.0.2' rel='nofollow'>Twitter4j API</a>
+</li><li><a class='wikilink' href='index.php-n=Main.Grammars.html'>Grammars</a>
+</li><li><a class='wikilink' href='index.php-n=Main.N-Grams.html'>N-Grams</a>
+<div class='vspace'></div></li><li><a class='wikilink' href='index.php-n=Site.SideBar_action=edit.html'>SideBar</a>
+</li></ul>
+
+                   <!--Main.SideBar-->
+        </td>
+  </tr>
+
+		</table>
+
+    <!--/PageLeftFmt-->
+
+		</td>
+
+		<td valign="top" bgcolor=#fcfcfc>
+		<table cellspacing="0" cellpadding="0" border="0" width=640>
+  		<tr>
+    		<td bgcolor="#fcfcfc" style="padding-left: 10px; padding-top: 12px; padding-right: 15px">
+
+                <!--PageTitleFmt-->
+                <strong><h2 class="titletext">
+                   <a href="index.php-n=Main.HomePage.html">Main</a> &raquo; 
+                   <a href="index.php-n=Main.RegularExpressions.html">RegularExpressions</a>
+                </h2></strong>
+
+<div style="width: 50em; margin-right:10px; margin-left:10px">
+                <!--PageText-->
+<div id='wikitext'>
+<h3>Regular Expressions Exercise (3 parts)</h3>
+<p>1) Write a regular expression that, given an arbitrary HTML page, extracts all of the valid 'sentences' and returns them in an a List (you can use an ArrayList). A 'sentence' (for the purpose of this exercise) will be defined as a sequence of at least 3 words, beginning with a capital letter &amp; ending with a period, question mark, or exclamation point. Feel free to use the sample code from the reading as a template. 
+You should test (use the fetch() methods from the RiHtmlParser if you like) with various web pages (don't use only one!), verifying that:
+</p>
+<div class='vspace'></div><ol><li>all extracted items are real sentences, 
+</li><li>no real sentences are missed, and 
+</li><li>no extracted sentences contain bad (non-textual) characters (&lt;, &gt;, ~, ^, *, [, ], {, }, | etc.) 
+</li></ol><p class='vspace'>Adapt your expression to handle 'fringe' cases, e.g.,  abbreviations, punctuation inside quotations, entities (&amp;copy;) and html markup (&lt;b&gt;), etc.
+</p>
+<div class='vspace'></div><pre>    boolean stripTags = false; // true to strip html
+    String testUrl = "<a class='urllink' href='http://www.nytimes.com/' rel='nofollow'>http://www.nytimes.com/</a>";    
+
+    // fetch the contents of the webpage
+    RiHtmlParser fetcher = new RiHtmlParser(this);
+    String pgContents = fetcher.fetch(testUrl, stripTags);
+
+    // call your method (written elsewhere) to pull-out the sentences
+    List sents = extractSentences(pgContents);
+
+    // then print them out...
+    for (int i = 0; i &lt; sents.size(); i++)
+      println(i+") "+sents.get(i));
+
+    println("Got "+sents.size()+" total sentences.");
+</pre><p class='vspace'>Note: One (of many) good references on regular expressions is the <a class='urllink' href='http://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html' rel='nofollow'>Pattern class</a> in the Java API itself.
+</p>
+<div class='vspace'></div><hr />
+<p class='vspace'><br />
+2) Write a regular expression that matches all binary strings (containing only 0s &amp; 1s) of length at least 1, where no digit repeats, (e.g,  0, 1, 10, 010, 10101, 01010101, etc.)
+</p>
+<p class='vspace'><br />
+</p><hr />
+<p class='vspace'><br />
+3) Same as above, but the string must be at least 3 digits long and have <em>exactly</em> 1 repetition of a digit (e.g,  0110, 100101, 100, 010101011, 110, etc.). This one is a bit tricky, but do give it a try (after solving #2). Extra credit for the most concise correct expression.
+</p>
+<p class='vspace'><br />
+</p><hr />
+<p class='vspace'>No need to code #2-3, just submit the regular expressions in your email (no back-references, look-aheads, etc. needed).
+</p>
+<p class='vspace'><em>Some other articles/examples/practice with Regexs: <a class='urllink' href='http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know/' rel='nofollow'>1</a> <a class='urllink' href='http://www.scribd.com/doc/965568/16-Java-Regex' rel='nofollow'>2</a></em>
+</p>
+<p class='vspace'><br />
+</p>
+</div>
+
+</div>
+
+	    	</td>
+  	</tr>
+	</table>
+
+   </td>
+   <td width=200 align=right valign=top><br>
+
+   <table cellspacing="2" cellpadding="0" border="0" width=200
+bgcolor="#CCCFD6">
+      <tr><td id='wikiright' height=2075 valign=top>
+         <p  style='text-align: right;'> <a class='urllink' href='http://rednoise.org/~dhowe/' rel='nofollow'><strong><span style='font-size:83%'>Instructor: Dr. Daniel C. Howe</span></strong></a>
+</p><h1>Resources</h1>
+<ul><li><a class='urllink' href='http://p-dpa.net/' rel='nofollow'>Post-Digital</a>
+</li><li><a class='urllink' href='http://www.arras.net/' rel='nofollow'>Arras.Net</a>
+</li><li><a class='urllink' href='http://iloveepoetry.com/' rel='nofollow'>I Love ePoetry</a>
+</li><li><a class='urllink' href='http://whitney.org/Exhibitions/Artport/Commissions/Codedoc' rel='nofollow'>CODeDoc</a>
+</li><li><a class='urllink' href='http://www.thecontinentalreview.com/' rel='nofollow'>ContinentalReview</a>
+</li><li><a class='urllink' href='http://www.drunkenboat.com/' rel='nofollow'>DrunkenBoat</a>
+</li><li><a class='urllink' href='http://www.eastgate.com/ReadingRoom.html#' rel='nofollow'>Eastgate Systems</a>
+</li><li><a class='urllink' href='http://www.electronicbookreview.com/' rel='nofollow'>Electronic Book Review</a>
+</li><li><a class='urllink' href='https://eliterature.org/' rel='nofollow'>The Electronic Literature Org.</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/1/' rel='nofollow'>E-Literature Collection 1</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/2/' rel='nofollow'>E-Literature Collection 2</a>
+</li><li><a class='urllink' href='http://collection.eliterature.org/3/' rel='nofollow'>E-Literature Collection 3</a>
+</li><li><a class='urllink' href='http://newhorizons.eliterature.org/index.php.html' rel='nofollow'>New Horizons For The Literary</a>
+</li><li><a class='urllink' href='http://writing.upenn.edu/epc/' rel='nofollow'>Electronic Poetry Center</a>
+</li><li><a class='urllink' href='https://elmcip.net/' rel='nofollow'>The ELMCIP Database</a>
+</li><li><a class='urllink' href='https://grandtextauto.soe.ucsc.edu/' rel='nofollow'>Grand Text Auto</a>
+</li><li><a class='urllink' href='http://www.writing.upenn.edu/wh/' rel='nofollow'>Kelly Writers House</a>
+</li><li><a class='urllink' href='https://www.cddc.vt.edu/journals/newriver/' rel='nofollow'>New River Journal</a>
+</li><li><a class='urllink' href='http://nt2.uqam.ca/en/search/site/?f%5B0%5D=type:repertoire&retain-filters=1' rel='nofollow'>ALN / NT2</a>
+</li><li><a class='urllink' href='http://www.writing.upenn.edu/pennsound/' rel='nofollow'>PENNsound</a>
+</li><li><a class='urllink' href='http://www.ubu.com/' rel='nofollow'>UbuWeb</a> 
+</li><li><a class='urllink' href='http://www.springgunpress.com' rel='nofollow'>Spring Gun Journal</a>
+</li><li><a class='urllink' href='http://www.turbulence.org/' rel='nofollow'>Turbulence</a>
+</li><li><a class='urllink' href='http://artport.whitney.org/' rel='nofollow'>The Whitney ARTPORT</a>
+</li><li><a class='urllink' href='http://cellproject.net/' rel='nofollow'>E-Literature Consortium</a>
+</li><li><a class='urllink' href='http://paper.li/eliterature' rel='nofollow'>This Week in E-Lit</a>
+</li></ul><p class='vspace'><br />
+</p><ul><li><a class='wikilink' href='index.php-n=Site.RightSideBar_action=edit.html'>SideBar</a>
+</li></ul>
+
+         <!--Main.SideBar-->
+      </td></tr>
+    </table>
+
+  </td>
+</tr>
+</table>
+
+</td>
+</tr>
+<!--PageFooterFmt-->
+<tr>
+  <td align="right" class="update">
+    <div class='lastmod'>Page last modified on October 15, 2010, at 12:44 AM EST</div></div>
+  </td>
+</tr>
+<!--/PageFooterFmt-->
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="right" class="copyright">
+	&copy;howe
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>
