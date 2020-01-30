@@ -1,14 +1,17 @@
 Method #1
 
 pip install pywebcopy
-
 python bycopy.py
 
-cannot copy slides (pdf) for now, new further investigation
+cannot copy slides (pdf)
+cannot keep external links
+need further research
 
 
-Method #2 
+Method #2 (recommended)
+using app SiteSucker
 https://ricks-apps.com/osx/sitesucker/index.html
-For macOS 10.9 Mavericks, or greater: SiteSucker 2.4.6
+SiteSucker 2.4.6
 
+double click wdm.suck to open the config file and click download
 can crawl everything and keep external links
