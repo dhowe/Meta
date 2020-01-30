@@ -1,0 +1,151 @@
+======= Broken Links =======
+
+Line: 203 http://www.sunshine69.com/noflash.html%22
+    Status: 410 Gone
+
+    The resource is gone. You should remove this link. 
+error Line: 195 http://www.leevilehto.net/google/patterns.asp%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 197 http://www.motorhueso.net/%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 191 http://www.chbooks.com/online/carnival/index.html%22 redirected to https://chbooks.com/online/carnival/index.html%22
+    Status: 301 -> 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 177 http://earstudio.com/2010/09/29/listening-post/
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 196 http://www.jodi.org/%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 188 http://spinelessbooks.com/2002/%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 200 http://nobodyhere.com/%22 redirected to https://nobodyhere.com/%22
+    Status: 301 -> 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 199 http://turbulence.org/Works/twotxt/index.htm%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 198 http://www.mouchette.org/%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 185 http://www.bevrowe.info/Poems/QueneauRandom.html
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 205 http://www.yorku.ca/agyu/artistsproject/brian.html%22
+    Status: 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+info Line: 181 http://www.secrettechnology.com/artgames.html
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually. 
+info Line: 190 http://www.bemboszoo.com/%22
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually. 
+info Line: 133 http://docs.oracle.com/javase/6/docs/api
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually. 
+error Line: 179 http://www.yhchang.com%22/
+    Status: 500 Can't connect to www.yhchang.com":80 (Name or service not known)
+
+    This is a server side problem. Check the URI. 
+error Line: 182 http://infosthetics.com/archives/2007/07/water_text_sculpture_documentary.html
+    Status: 500 Can't connect to infosthetics.com:80 (Connection timed out)
+
+    This is a server side problem. Check the URI. 
+error Line: 230 http://www.electronicbookreview.com/
+    Status: 503 Service Unavailable
+
+    The server cannot service the request, for some unknown reason. 
+
+List of redirects
+
+The links below are not broken, but the document does not use the exact URL, and the links were redirected. It may be a good idea to link to the final location, for the sake of speed.
+
+warning Line: 246 http://artport.whitney.org/ redirected to https://whitney.org/artport
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 131 http://www.rednoise.org/rita/reference redirected to http://rednoise.org/rita/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 202 http://www.softcinema.net/%22 redirected to http://www.softcinema.net/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Lines: 130, 134 http://processing.org/reference/ redirected to https://processing.org/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 248 http://paper.li/eliterature redirected to https://paper.li/eliterature
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 132 http://www.rednoise.org/tweeter/doc redirected to http://www.rednoise.org/tweeter/doc/
+    Status: 301 -> 200 OK
+
+    The link is missing a trailing slash, and caused a redirect. Adding the trailing slash would speed up browsing. 
+warning Line: 193 http://daria.muxspace.com/%22 redirected to http://www.muxspace.com/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 225 http://iloveepoetry.com/ redirected to http://iloveepoetry.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 204 http://www.scottmccloud.com/comics/carl/index.html%22 redirected to http://scottmccloud.com/comics/carl/index.html
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 123 http://www.rednoise.org/rita/ redirected to http://rednoise.org/rita/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 245 http://www.turbulence.org/ redirected to http://turbulence.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 194 http://www.e-sheep.com/%22 redirected to http://www.e-sheep.com/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 183 http://artport.whitney.org/commissions/codedoc/Paley/CodeProfiles_800x600.htm redirected to https://artport.whitney.org/commissions/codedoc/Paley/CodeProfiles_800x600.htm
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 189 http://www.nationalphilistine.com/alternumerics/%22 redirected to http://www.nationalphilistine.com
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 201 http://pbfb.ca/%22 redirected to http://pbfb.ca/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 224 http://www.arras.net/ redirected to https://arras.net/arras/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 186 http://www.ted.com/index.php/talks/view/id/144 redirected to https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 226 http://whitney.org/Exhibitions/Artport/Commissions/Codedoc redirected to https://whitney.org/exhibitions/codedoc
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 

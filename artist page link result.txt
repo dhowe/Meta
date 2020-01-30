@@ -1,0 +1,115 @@
+======= Broken Links =======
+
+error Line: 192 http://www.temple.edu/creativewriting/faculty/osman/ redirected to https://www.temple.edu/creativewriting/faculty/osman/
+    Status: 301 -> 410 Gone
+
+    The resource is gone. You should remove this link. 
+error Line: 185 http://gregorywhitehead.com/vze4bsve/ redirected to https://gregorywhitehead.com/vze4bsve/
+    Status: 301 -> 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+error Line: 169 http://www.asondheim.org/00README1st.TXT redirected to http://asondheim.org/00README1st.TXT
+    Status: 301 -> 404 Not Found
+
+    The link is broken. Double-check that you have not made any typo, or mistake in copy-pasting. If the link points to a resource that no longer exists, you may want to remove or fix the link. 
+info Line: 191 http://www.secrettechnology.com/works/everything.htm
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually. 
+info Line: 133 http://docs.oracle.com/javase/6/docs/api
+    Status: (N/A) Forbidden by robots.txt
+
+    The link was not checked due to robots exclusion rules. Check the link manually. 
+error Line: 174 http://www.camilleutterback.com/
+    Status: 406 Not Acceptable
+
+    The server isn't capable of responding according to the Accept* headers sent. This is likely to be a server-side issue with negotiation. 
+error Line: 182 http://www.academy.rpi.edu/glide/
+    Status: 500 Can't connect to www.academy.rpi.edu:80 (Connection timed out)
+
+    This is a server side problem. Check the URI. 
+error Line: 202 http://www.hotkey.net.au/~netwurker/resume2.htm
+    Status: 500 Can't connect to www.hotkey.net.au:80 (Connection timed out)
+
+    This is a server side problem. Check the URI. 
+error Line: 238 http://www.electronicbookreview.com/
+    Status: 503 Service Unavailable
+
+    The server cannot service the request, for some unknown reason. 
+error Line: 181 http://homepage.mac.com/davidrokeby/home.html
+    Status: 503 Service Unavailable
+
+    The server cannot service the request, for some unknown reason. 
+
+======= List of redirects =======
+
+The links below are not broken, but the document does not use the exact URL, and the links were redirected. It may be a good idea to link to the final location, for the sake of speed.
+
+warning Line: 193 http://en.wikipedia.org/wiki/Jenny_Holzer redirected to https://en.wikipedia.org/wiki/Jenny_Holzer
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 131 http://www.rednoise.org/rita/reference redirected to http://rednoise.org/rita/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 233 http://iloveepoetry.com/ redirected to http://iloveepoetry.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 254 http://artport.whitney.org/ redirected to https://whitney.org/artport
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 256 http://paper.li/eliterature redirected to https://paper.li/eliterature
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 171 http://benfry.com/ redirected to https://benfry.com/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 201 http://epc.buffalo.edu/authors/glazier/ redirected to http://writing.upenn.edu/epc/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 175 http://www.babel.ca/ redirected to https://babel.ca/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 189 http://en.wikipedia.org/wiki/Janet_Cardiff redirected to https://en.wikipedia.org/wiki/Janet_Cardiff
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 123 http://www.rednoise.org/rita/ redirected to http://rednoise.org/rita/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 234 http://whitney.org/Exhibitions/Artport/Commissions/Codedoc redirected to https://whitney.org/exhibitions/codedoc
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 132 http://www.rednoise.org/tweeter/doc redirected to http://www.rednoise.org/tweeter/doc/
+    Status: 301 -> 200 OK
+
+    The link is missing a trailing slash, and caused a redirect. Adding the trailing slash would speed up browsing. 
+warning Line: 172 http://digitalmedia.risd.edu/billseaman/ redirected to https://dm.risd.edu
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Lines: 130, 134 http://processing.org/reference/ redirected to https://processing.org/reference/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 205 http://www.stanford.edu/~demarini/ redirected to https://web.stanford.edu/~demarini/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Line: 253 http://www.turbulence.org/ redirected to http://turbulence.org/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
+warning Lines: 173, 232 http://www.arras.net/ redirected to https://arras.net/arras/
+    Status: 301 -> 200 OK
+
+    This is a permanent redirect. The link should be updated. 
